@@ -1,0 +1,70 @@
+/* ====== icon style ======  */
+.icon { display: inline-block; font-size:0;
+  &::after { content: ""; display: block;}
+}
+.form-input-x { &::after { @include sp_icon($form-input_del);}} //input 내용삭제
+.form-search { &::after { @include sp_icon($form-search);}} //input 검색
+
+.icon-delete { &::after { @include sp_icon($icon-delete);}} //선택삭제
+.icon-edit { &::after { @include sp_icon($icon-edit);}} //수정하기
+.icon-refresh { &::after { @include sp_icon($icon-refresh);}} //재업로드
+.icon-end { &::after { @include sp_icon($icon-end);}} //종료
+.icon-file_g { &::after { @include sp_icon($icon-file_g);}} //파일첨부
+.icon-file_b { &::after { @include sp_icon($icon-file_b);}} //파일첨부
+.icon-check { &::after { @include sp_icon($icon-check);}} //미리보기
+.icon-pdf { &::after { @include sp_icon($icon-pdf);}} //PDF저장
+.icon-print { &::after { @include sp_icon($icon-print);}} //인쇄하기
+.icon-headset { &::after { @include sp_icon($icon-headset);}} //자주묻는질문
+.icon-ahead { &::after { @include sp_icon($icon-ahead);}} //보장내용확인
+
+.icon-error { &:after { @include sp_icon($icon-error);}} //error
+.icon-info{ &:after { @include sp_icon($icon-info);}} //가이드
+.icon-cheack { &:after { @include sp_icon($icon-cheack);}} //cheack default
+.icon-cheack_on { &:after { @include sp_icon($icon-cheack_on);}} //cheack on
+.icon-cheack_dim { &:after { @include sp_icon($icon-cheack_dim);}} //cheack disabled
+.icon-plus { &:after { @include sp_icon($icon-plus);}} //cheack disabled
+.icon-minus { &:after { @include sp_icon($icon-minus);}} //cheack disabled
+.icon-equal { &:after { @include sp_icon($icon-equal);}} //cheack disabled
+
+.btn_close {   &::after { @include sp_icon($icon-close);}} //layer close
+.icon-gnb_open {&::after { @include sp_icon($icon-menu_mo);}} //gnb mobile open
+
+/* icon_tooltip */
+.icon-tooltip { 
+  &:after { @include sp_icon($icon-tooltip); }
+  &:hover { 
+    &:after { @include sp_icon($icon-tooltip_on); }
+  }
+}
+
+/*  accordion  */
+.icon-accordion_arrow_down { &:after { @include sp_icon($icon-expand_down); }}
+.icon-accordion_arrow_up { &:after { @include sp_icon($icon-expand_up);}}
+
+
+/* paging btn */
+.page_prev  { 
+  &:after { @include sp_icon($icon-pagePrev);}
+  &:hover, &:focus, &.on {
+    &:after { @include sp_icon($icon-pagePrev_on);}
+  }
+}
+.page_prevEnd  { 
+  &:after { @include sp_icon($icon-pagePrevEnd);}
+  &:hover, &:focus, &.on {
+    &:after { @include sp_icon($icon-pagePrevEnd_on);}
+  }
+}
+.page_next  { 
+  &:after { @include sp_icon($icon-pageNext);}
+  &:hover, &:focus, &.on {
+    &:after { @include sp_icon($icon-pageNext_on);}
+  }
+}
+.page_nextEnd  { 
+  &:after { @include sp_icon($icon-pageNextEnd);}
+  &:hover, &:focus, &.on {
+    &:after { @include sp_icon($icon-pageNextEnd_on);}
+  }
+}
+

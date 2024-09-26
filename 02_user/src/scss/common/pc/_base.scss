@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+// html {scroll-behavior: smooth; }//스크롤 자연스럽게
+html, body { -webkit-text-size-adjust:none; } /*글자자동조절방지*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {margin:0;padding:0;border:0;  }
+ul, li, ol { list-style:none;  }
+img, fieldset , video{ border:0;  vertical-align:top; }
+input, textarea, select { vertical-align:middle; resize:none; position:relative; -webkit-border-radius:0; border-radius:0; }	
+button { border:0 none; background:transparent; cursor:pointer; }		
+caption, legend, .hide  { position:absolute; top:0; left:0; width:0; height:0; font-size:0; line-height:0; overflow:hidden; text-indent:-9999px; }
+table { border-collapse:collapse; border-spacing:0; line-height:1.5}
+table caption.tit { width:100%; height:auto; margin:20px 0; font-size:20px; font-weight:bold; text-indent:0; visibility:visible}
+a:link, a:visited  { text-decoration:none; color:#333;}
+a:active, a:hover, a:focus { text-decoration:none; }		
+ins{text-decoration:none}
+i,em {font-style:normal;}
+del{text-decoration:line-through}
+/* HTML5 display-role reset for older browsers   */	 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+body, a, li, dt, dd, td, th, span, div, p, input, textarea,  button, option,
+h1, h2, h3, h4, h5, h6, legend, figcaption { 
+  font-family: $baseFT, Noto Sans, dotum,"돋움",Arial,AppleGothic, Sans-serif; font-size:16px; font-weight: 400; vertical-align:middle; color: #000; word-break: keep-all; box-sizing: border-box; line-height: 22px; letter-spacing: -0.02em; 
+   }
+h1{font-size: 30px} h2{font-size: 27px} h3{font-size: 23px} h4 {font-size:20px } h5{font-size: 17px } h6{ font-size: 13px} 
+
+/* 클리어 */
+.clearfix:after {display:block;visibility:hidden;clear:both;height:0;content:'.'}
+.bg-alt, .img-alt { position:absolute; width:1px; height:1px; margin: 0; padding: 0; overflow:hidden; font-size:0; line-height:0; }
+.blind {overflow: hidden;position: absolute;clip: rect(0 0 0 0);width: 0;height: 0;margin: -1px;padding: 0;font-size: 1px;line-height: 0;color: transparent;}
+.fixed { position: fixed !important;}
+.bn { background:none !important}
+.cb { clear:both; overflow:hidden}
+.cl { clear:left; overflow:hidden}
+.cr { clear:right; overflow:hidden}
+.no-scroll { position: fixed; overflow: hidden; }
+
+/* 플로트 */
+.fl{float:left}.fr{float:right}.fn{float:none !important}
+
+/* 포지션 */
+.pr{position:relative}.pa{position:absolute}.pf{position:fixed}
+
+/* 텍스트 정렬 */
+.tal{text-align:left !important}
+.tac{text-align:center !important}
+.tar{text-align:right !important}
+
+.pc { display: block;}
+.mobile { display: none;}

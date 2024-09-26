@@ -1,0 +1,167 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$btn-delete-name: 'btn_delete';
+$btn-delete-x: 94px;
+$btn-delete-y: 21px;
+$btn-delete-offset-x: -94px;
+$btn-delete-offset-y: -21px;
+$btn-delete-width: 16px;
+$btn-delete-height: 16px;
+$btn-delete-total-width: 114px;
+$btn-delete-total-height: 86px;
+$btn-delete-image: '/resources/images/common/sp_icon.png';
+$btn-delete: (94px, 21px, -94px, -21px, 16px, 16px, 114px, 86px, '/resources/images/common/sp_icon.png', 'btn_delete', );
+$facebook-w27-name: 'facebook_w27';
+$facebook-w27-x: 0px;
+$facebook-w27-y: 0px;
+$facebook-w27-offset-x: 0px;
+$facebook-w27-offset-y: 0px;
+$facebook-w27-width: 54px;
+$facebook-w27-height: 54px;
+$facebook-w27-total-width: 114px;
+$facebook-w27-total-height: 86px;
+$facebook-w27-image: '/resources/images/common/sp_icon.png';
+$facebook-w27: (0px, 0px, 0px, 0px, 54px, 54px, 114px, 86px, '/resources/images/common/sp_icon.png', 'facebook_w27', );
+$icon-accordion-arrow-down-name: 'icon-accordion_arrow_down';
+$icon-accordion-arrow-down-x: 32px;
+$icon-accordion-arrow-down-y: 54px;
+$icon-accordion-arrow-down-offset-x: -32px;
+$icon-accordion-arrow-down-offset-y: -54px;
+$icon-accordion-arrow-down-width: 30px;
+$icon-accordion-arrow-down-height: 30px;
+$icon-accordion-arrow-down-total-width: 114px;
+$icon-accordion-arrow-down-total-height: 86px;
+$icon-accordion-arrow-down-image: '/resources/images/common/sp_icon.png';
+$icon-accordion-arrow-down: (32px, 54px, -32px, -54px, 30px, 30px, 114px, 86px, '/resources/images/common/sp_icon.png', 'icon-accordion_arrow_down', );
+$icon-accordion-arrow-up-name: 'icon-accordion_arrow_up';
+$icon-accordion-arrow-up-x: 62px;
+$icon-accordion-arrow-up-y: 54px;
+$icon-accordion-arrow-up-offset-x: -62px;
+$icon-accordion-arrow-up-offset-y: -54px;
+$icon-accordion-arrow-up-width: 30px;
+$icon-accordion-arrow-up-height: 30px;
+$icon-accordion-arrow-up-total-width: 114px;
+$icon-accordion-arrow-up-total-height: 86px;
+$icon-accordion-arrow-up-image: '/resources/images/common/sp_icon.png';
+$icon-accordion-arrow-up: (62px, 54px, -62px, -54px, 30px, 30px, 114px, 86px, '/resources/images/common/sp_icon.png', 'icon-accordion_arrow_up', );
+$icon-tooltip-black-name: 'icon-tooltip_black';
+$icon-tooltip-black-x: 94px;
+$icon-tooltip-black-y: 0px;
+$icon-tooltip-black-offset-x: -94px;
+$icon-tooltip-black-offset-y: 0px;
+$icon-tooltip-black-width: 20px;
+$icon-tooltip-black-height: 21px;
+$icon-tooltip-black-total-width: 114px;
+$icon-tooltip-black-total-height: 86px;
+$icon-tooltip-black-image: '/resources/images/common/sp_icon.png';
+$icon-tooltip-black: (94px, 0px, -94px, 0px, 20px, 21px, 114px, 86px, '/resources/images/common/sp_icon.png', 'icon-tooltip_black', );
+$icon-tooltip-black-2x-name: 'icon-tooltip_black@2x';
+$icon-tooltip-black-2x-x: 0px;
+$icon-tooltip-black-2x-y: 54px;
+$icon-tooltip-black-2x-offset-x: 0px;
+$icon-tooltip-black-2x-offset-y: -54px;
+$icon-tooltip-black-2x-width: 32px;
+$icon-tooltip-black-2x-height: 32px;
+$icon-tooltip-black-2x-total-width: 114px;
+$icon-tooltip-black-2x-total-height: 86px;
+$icon-tooltip-black-2x-image: '/resources/images/common/sp_icon.png';
+$icon-tooltip-black-2x: (0px, 54px, 0px, -54px, 32px, 32px, 114px, 86px, '/resources/images/common/sp_icon.png', 'icon-tooltip_black@2x', );
+$pop-close2-name: 'pop_close2';
+$pop-close2-x: 54px;
+$pop-close2-y: 0px;
+$pop-close2-offset-x: -54px;
+$pop-close2-offset-y: 0px;
+$pop-close2-width: 40px;
+$pop-close2-height: 40px;
+$pop-close2-total-width: 114px;
+$pop-close2-total-height: 86px;
+$pop-close2-image: '/resources/images/common/sp_icon.png';
+$pop-close2: (54px, 0px, -54px, 0px, 40px, 40px, 114px, 86px, '/resources/images/common/sp_icon.png', 'pop_close2', );
+$select-arrow1-name: 'select_arrow1';
+$select-arrow1-x: 54px;
+$select-arrow1-y: 40px;
+$select-arrow1-offset-x: -54px;
+$select-arrow1-offset-y: -40px;
+$select-arrow1-width: 22px;
+$select-arrow1-height: 14px;
+$select-arrow1-total-width: 114px;
+$select-arrow1-total-height: 86px;
+$select-arrow1-image: '/resources/images/common/sp_icon.png';
+$select-arrow1: (54px, 40px, -54px, -40px, 22px, 14px, 114px, 86px, '/resources/images/common/sp_icon.png', 'select_arrow1', );
+$spritesheet-width: 114px;
+$spritesheet-height: 86px;
+$spritesheet-image: '/resources/images/common/sp_icon.png';
+$spritesheet-sprites: ($btn-delete, $facebook-w27, $icon-accordion-arrow-down, $icon-accordion-arrow-up, $icon-tooltip-black, $icon-tooltip-black-2x, $pop-close2, $select-arrow1, );
+$spritesheet: (114px, 86px, '/resources/images/common/sp_icon.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

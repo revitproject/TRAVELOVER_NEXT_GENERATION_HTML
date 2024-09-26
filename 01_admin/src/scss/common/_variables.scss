@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* _variables.scss */
+
+//root path
+//$G-path: '../';
+$G-maxWidth   : 1920px;  // 디자인 최대크기
+$G-width      : 1360px;  // 사이트 컨텐츠 크기 여백포함
+$G-inWidth    : 1320px;  // 사이트 컨텐츠 크기
+$G-wMobile    : 959px;   // 미디어쿼리 모바일 960
+
+/* [이미지경로] img path */
+$GpathImg: '/_images/';
+
+/* [폰트 이름] fonts Name */
+$baseFT : "SUIT-Regular";
+$subFT   : "Roboto";   // 나눔 스쿼어 (title, 영문, 숫자)
+
+// Color 
+$colorMain: #008639; // Primary 
+$colorSub : #ee7a56;
+$colorBGg : #f8f8f8;
+$colorBGd : #1D1D22;
+$colorBGw : #ffffff;
+
+
+// $colorBGw : #e0e0e0;
+
+// fonts Name
+$colorR  : #e90000;  // 에러, 경고, 포인트
+$colorL  : rgba(0, 0, 0, 0.4);// 저체도 컬러, input:placeholder
+$colorD  : #454545;  // 기본 컬러 
+$colorB  : #222222;  // 강조 컬러 
+
+
+$colorP  : #cc0000;  // 포인트 컬러 
+// $colorD  : #454545;  // 기본 컬러 
+// $colorS  : #ad1818;  // 서브 컬러
+// $colorE  : #f24848;  // 에러 경고 
+
+// form Color
+$formH   : 40px    ;       // text, select 높이
+$formH-mb: 40px    ;       // text, select 높이
+$form_sortH   : 54px;      // text, select 높이
+$form_sortH-mb : 32px;     // text, select 모바일 높이
+$lineC_d : #cdcdcd ;     // 라인 기본값
+$lineC_s : #3e73d1  ;    // 라인 성공
+$lineC_e : #f24848 ;     // 라인 경고 에러
+$lineC_f : #0d0d0e  ;    // 라인 포커스 
+
+// border
+$borderTop : 2px solid #555555;
+$borderLine : 1px solid #d8d8d8;
+$borderBottom : 1px solid #d8d8d8;

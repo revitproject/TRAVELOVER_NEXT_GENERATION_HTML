@@ -1,0 +1,131 @@
+//// 계약조회
+.contract-section {
+  .content-item { margin-top: 80px;}
+  .radio-group {
+    .radio-btn {
+      .icon-individual-1 { &:after { @include sp_icon($icon-individual-1);}} 
+      .icon-individual-2 { &:after { @include sp_icon($icon-individual-2);}} 
+      .icon-individual-3 { &:after { @include sp_icon($icon-individual-3);}}
+    }
+    input[type="radio"] { 
+      &:checked + .radio-btn { 
+        .icon-individual-1 { &:after { @include sp_icon($icon-individual-1_on);}} 
+        .icon-individual-2 { &:after { @include sp_icon($icon-individual-2_on);}} 
+        .icon-individual-3 { &:after { @include sp_icon($icon-individual-3_on);}} 
+      }
+    }
+  }
+}
+
+//// 이용안내
+// 자주하는질문(FAQ)
+.faq-section {
+  .search-box { padding: 46px; background: $colorG0; border-radius: 20px;
+    .search-inner { display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .input_search { width: 413px; }
+    .select-box {
+      .select2-selection__rendered { font-size: 15px; }
+    }
+    .btn_sm {  min-width: 85px; 
+      > span { font-weight: 600; } 
+    }
+    + .tab-container { margin-top: 80px; }
+  }
+
+  .tab-container {
+    .tab-panel {
+      .tab-cont { padding: 46px 0 0; }
+    }
+  }
+  // 아코디언 FAQ 타입
+  .has-faq {
+    .accordion-list {
+      .header-area { 
+        &.active .acc_btn i { transform: translateY(-50%) rotate(180deg); }
+        .acc_btn {  padding: 20px 72px 20px 81px;
+          i { top: 50%; right: 40px; transform: translateY(-50%); }
+          &::before {
+            content: 'Q';
+            position: absolute;
+            left: 32px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            width: 20px;
+            margin-right: 20px;
+            color: $colorMain;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 24px;
+          } 
+          .acco-type { display: block; margin-bottom: 8px; color: $colorG9; font-size: 16px; font-weight: 500; line-height: 21px; word-break: break-all; } 
+          .accordion_name { font-size: 18px; font-weight: 700; line-height: 22px; }
+        }
+      }
+      .con-area { padding: 40px; background: $colorGM;
+        .con-desc {
+          position: relative;
+          padding-left: 40px;
+          font-size: 16px;
+          line-height: 21px;
+          word-break: break-all;
+          &::before {
+            content: 'A';
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            width: 20px;
+            margin-right: 20px;
+            color: $colorB;
+            font-size: 22px;
+            font-weight: 900;
+            line-height: 26px;
+          } 
+          p { margin-bottom: 8px; font-size: 16px; line-height: 21px; word-break: break-all;
+            &:last-child { margin-bottom: 0; }
+          }
+        }
+      }
+    }
+    +.btn_set-single { margin-top: 60px; }
+  }
+}
+
+// 1:1문의
+.inquiry-section {
+  .box-base.has-form + .tab-container {
+    margin-top: 30px;
+  }
+  .form-list {
+    .input-group > label {
+      min-width: 37px;
+      margin-right: 30px;
+    }
+  }
+  // 답변 영역
+  .anwser-list { margin-top: 20px; padding: 0 64px;
+    .form-list { max-width: 100%; }
+    .input-group {
+      position: relative;
+      padding-left: 54px;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 13px;
+        display: block;
+        @include sp_icon($icon-reply);
+      }
+    }
+  }
+}
+
+// 당첨자발표
+.winner-section {
+  .list-wrap {
+    .list-base {
+      > li .list_link {
+        padding: 38px 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+html, body { margin: 0; padding: 0; height: 100%; }
+.wrapper {
+  .cont-inner{ padding:0 24px;}
+}
+#container { min-height: 100%;}
+#contents { margin-top: 50px; }
+
+/* ================== page title */
+.title-section { margin: 0 0 30px;
+  .title { font-size: 20px; font-weight: 700; line-height: 26px; }
+  .sub_txt { font-size: 14px; font-weight: 300; line-height: 19px; margin-top: 6px; color: $colorG6;
+  }
+}
+
+/* ========================== 섹션 basis-section  (type_section-XXXX) */
+section[class$="-section"] {
+  //.section-wrap { min-width: 100%; background-repeat: no-repeat; background-position: center 0; }
+  &:first-child { padding-top: 40px; }
+  &:last-child { padding-bottom: 60px; }
+
+  .cont-group { margin-top: 50px;
+    &:first-child { margin-top: 0; }
+  }
+}
+
+/* layout.scss */
+
+// 2뎁스 메뉴  컬럼 수에따른 width 값 
+// .col1 li { width: 100%; }
+// .col2 li { width: 50%; }
+// .col3 li { width: 33.3333%; }
+// .col4 li { width: 25%; }
+
+// .wrap { background-color: #f8f8f9; transition: transform .5s; z-index:1;}
+
+// // 서브 텝메뉴
+// .subMenuTab {
+//     &:after { display:block;visibility:hidden;clear:both;height:0;content:'.'}
+//     li { position: relative; float: left; text-align:center; height:62px; 
+//         border-top:1px solid #eeeeee;
+//         border-bottom:1px solid #eeeeee;
+//         background-color: #fff;
+//         a:before { content: ""; display: block; width: 2px; height: 27.5px;
+//             position: absolute; top:14px; left: -1px; background-color: #eeeeee}
+//         a { font-size: 12px; color: #999; line-height: 60px;}
+//     }
+//     li:first-child a:before { display: none;}
+//     li.on a { color:$colorMain;}
+// }
+
+// // 아코디언 메뉴 
+// .accordion_menu { 
+//     .con-area { display: none; }
+// }

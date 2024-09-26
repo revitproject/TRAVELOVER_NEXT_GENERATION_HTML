@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko"><!--translate="no"//-->
+  <head>
+    <%- include('../../../include/_head.ejs', { title: "Travelover" }) %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header //-->
+      <%- include('../../../include/_header.ejs') %>
+      <!-- header //-->
+
+      <!-- container -->
+      <div id="container">
+			  <div id="contents">
+          <section class="contract-section">
+            <div class="cont-inner">
+              <div class="cont-group">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type2",
+                  "title_main" : "계약관리",
+                }) %>
+
+                <div class="radio-group has-payment">
+                  <div class="radio-item">
+                    <input type="radio" id="payment1" name="rdoPayment" checked>
+                    <label for="payment1" class="radio-btn">
+                      <i class="icon icon-payment-1"></i>
+                      <span class="label-text">
+                        <em>신용카드</em>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="payment2" name="rdoPayment">
+                    <label for="payment2" class="radio-btn">
+                      <i class="icon icon-payment-2"></i>
+                      <span class="label-text">
+                        <em>카카오페이</em>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="payment3" name="rdoPayment">
+                    <label for="payment3" class="radio-btn">
+                      <i class="icon icon-payment-3"></i>
+                      <span class="label-text">
+                        <em>PAYCO</em>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="payment4" name="rdoPayment">
+                    <label for="payment4" class="radio-btn">
+                      <i class="icon icon-payment-4"></i>
+                      <span class="label-text">
+                        <em>계좌이체</em>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cont-group">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "피보험자 목록",
+                  "title_sub" : "",
+                }) %>
+
+              </div>
+
+              <div class="cont-group">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "주문 금액 정보",
+                  "title_sub" : "",
+                }) %>
+
+                <div class="box-base">
+
+                </div>
+
+                <div class="btn_set tac">
+                  <button class="btn btn_lg btn_line" type="button"><span>계약취소</span></button>
+                  <button class="btn btn_lg btn_default" type="button"><span>결제</span></button>
+                </div>
+              </div>
+            </div>
+          </section>
+			  </div>
+		  </div>
+		  <!-- //container -->
+
+      <!-- footer -->
+      <%- include('../../../include/_footer.ejs') %>
+      <!-- //footer --> 
+    </div>
+  </body>
+</html>

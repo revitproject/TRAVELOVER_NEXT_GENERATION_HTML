@@ -1,0 +1,464 @@
+/* ======================== input text  */
+/* placeholder */
+input[type="text"], input[type="password"], input[type="number"], 
+input[type="tel"], input[type="url"],  input[type="email"], input[type="search"], 
+textarea { 
+  // ie
+  &.placeholdersjs {color: $colorL;} 
+  // Internet Explorer 10 이상에 적용
+  &:-ms-input-placeholder {color: $colorL;}
+  //  Webkit, Blink, Edge에 적용
+  &::-webkit-input-placeholder {color: $colorL;} 
+  // Mozilla Firefox 4 부터 18에 적용
+  &::-moz-placeholder    {color: $colorL;}
+}
+
+// input style 
+em.star { display: inline-block; height: 14px; padding: 0 5px; color: $colorR; font-weight: bold; } // [필수]
+
+input[type="text"], input[type="password"], input[type="number"], 
+input[type="tel"], input[type="url"],  input[type="email"],    input[type="search"]{ 
+  width: 100%; height: $formH; padding: 18px 20px; color:#000;
+  font-size: 16px; vertical-align: middle; font-weight: 500;
+  border: 1px solid $lineC_d; outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  letter-spacing: -0.01em;
+  @media all and (max-width:$G-wMobile)  {
+    height: $formH-mb; font-size: 14px; line-height: 22px; border-radius: 4px;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type="tel"]::-webkit-inner-spin-button, 
+input[type="tel"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* ======================== focus, ,disabled, input_error */
+/* -focus */
+input[type="text"], input[type="password"], input[type="number"], input[type="url"], input[type="email"], input[type="search"]
+{ &:focus { border-color: $lineC_f;} }
+/* -read only,  -disabled */
+input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="url"], input[type="email"], input[type="search"] { 
+  &:read-only , &:disabled { color:rgba(0,0,0,0.6); 
+    // ie
+    &.placeholdersjs { color: rgba(0, 0, 0, 0.2);} 
+    // Internet Explorer 10 이상에 적용
+    &:-ms-input-placeholder {color: rgba(0, 0, 0, 0.2);}
+    //  Webkit, Blink, Edge에 적용
+    &::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.2);} 
+    // Mozilla Firefox 4 부터 18에 적용
+    &::-moz-placeholder    {color: rgba(0, 0, 0, 0.2);}
+  } 
+  &.readonly, &.disabled { background-color : $colorBGd;
+    &+i:first-child { z-index: 1;}
+  }
+}
+
+/* -error */
+input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="url"], input[type="email"], input[type="search"]
+{ &.input_error {border-color: $lineC_e;} }
+
+.input-box{ position: relative;  vertical-align: top;
+  .check_byte-w { padding-right:  90px !important; }
+  .check_byte-h { padding-bottom: 50px !important; }
+  label, .dash  { display: inline-block; 
+    padding: 8px 20px 8px ; box-sizing: border-box; }
+  label:frist-child { padding-left: 0;  }
+  .dash { padding: 8px 0px 8px 0px; } 
+  input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="url"], input[type="email"], input[type="search"] {
+    padding: 8px 15px 8px ;
+  }
+  .btn { margin-top:-1px;}
+  .byte_check { position: absolute; top:10px; right:15px;
+    em   { vertical-align: middle; font-size:14px;  color: $colorR; }    
+    span { vertical-align: middle;  font-size:14px; }    
+  }
+}
+
+/* input 삭제 */
+.input_del { position: relative;
+  input { padding-right: 25px; } 
+  button { position: relative;  display: none; position: absolute; top:50%; right: 5px; margin-top: -8px;
+    i { 
+      &:after { content: ""; display: block; }
+    }
+  }
+}
+
+/* ========================  input radio */
+.trp.radio-box { position: relative; display: inline-block; padding-left: 32px;  min-height: 24px;
+  label { display: inline-block; vertical-align: top; font-size: 16px; line-height:24px; font-weight: 500; color:rgba(0,0,0,1);}
+  em { display: inline-block; height: 24px;    text-indent: 0px; }
+  input[type="radio"] { position: absolute; top:0; left: 0; /*  width:100%; */ width: 24px; height: 24px; margin: 0; padding: 0;  opacity: 0; filter: alpha(opacity=0); z-index: 1;  }    
+  input[type="radio"] + i { display: inline-block; position: absolute; top: 1px; left: 0px;  }
+  input[type="radio"] + i:after { display: block; content: '';  @include sprite($form-radio-off); }
+  input[type="radio"]:checked + i:after {  @include sprite($form-radio-on); }
+  input[type="radio"]:disabled + i:after {  @include opacity(0.5);
+    &:after { display: block; content: '';  /* @include sprite($form-radio-dim); */ }
+  }
+  input[type="radio"]:disabled + i +label  {  @include opacity(0.5);/*  color:$colorL; */ }
+  @media all and (max-width:$G-wMobile)  {
+    label { font-size: 14px; line-height: 24px; }
+  }
+}
+
+/* ========================  input checkbox */
+.trp.checkbox-box { position: relative; display: inline-block;  padding-left: 32px; min-height: 24px;
+  label { display: inline-block; vertical-align: top; font-size: 16px; line-height:24px; font-weight: 500; color:rgba(0,0,0,1);}
+  em { display: inline-block; height: 24px; text-indent: 0px;}
+  input[type="checkbox"] { position: absolute; top:0; left: 0;  /*  width:100%; */ width: 24px; height: 24px; margin: 0; padding: 0;  opacity: 0; filter: alpha(opacity=0); z-index: 1; }
+  input[type="checkbox"] + i { display: inline-block; position: absolute; top: 0; left: 0px; }
+  input[type="checkbox"] + i:after { display: block; content: '';  @include sprite($form-checkbox-off); }
+  input[type="checkbox"]:checked + i:after {  @include sprite($form-checkbox-on); }
+  input[type="checkbox"]:disabled + i:after { //@include opacity(0.5);
+    &:after { display: block; content: ''; @include sprite($form-checkbox-dim); /* @include sprite($form-checkbox-dim); */ }
+  }
+  // input[type="checkbox"]:disabled + i +label  { @include opacity(0.5);  /* color:$colorL; */ }
+  @media all and (max-width:$G-wMobile)  {
+    label { font-size: 14px; line-height: 24px; }
+  }
+}
+
+/* ======================== textarea  */
+.textarea-box { 
+  padding: 18px 20px;  background: rgba(0, 0, 0, 0.04); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 6px;
+  textarea { width: 100%;  height: 150px; border: 0; color:#000; font-size: 16px; vertical-align: middle; font-family: $baseFT; font-weight: 500; background-color:transparent; outline: none; -webkit-appearance: none; -moz-appearance: none; 
+  }
+  .byte_check { margin-top:0px; height: 20px; text-align: right; 
+    em   { vertical-align: bottom; font-size:12px;  color:$colorR; }    
+    span { vertical-align: bottom; font-size:12px; }    
+  }
+
+  @media all and (max-width:$G-wMobile)  {
+    border-radius: 4px;
+    textarea {font-size: 15px; line-height: 26px;}
+  }
+}
+
+/* ========================  select */
+.select-box { position: relative;
+  select { width: 100%; height: $formH; padding: 0 40px 0 15px; 
+    border: 1px solid $lineC_d; border-radius: 0px; -webkit-appearance: none;}
+  >i { position: absolute; top:0; right: 0; width: 40px; height: $formH;
+    &::after { content: ""; display: block;
+      position: absolute; top: 50%; left: 50%;
+      margin-left: -4px; margin-top: -2px; width: 0; height: 0;
+      border-style: solid;
+      border-width: 5px 4px 0 4px;
+      border-color: #222 transparent transparent transparent;
+    }
+  }
+  .select2Basic, 
+  .select2Basic_round, 
+  .select2Basic_noneline, 
+  .select2Basic_edge, 
+  .select2Basic_pop { width: 100%;  min-width: 100%;  }
+  .select2-container--default { text-align: left; 
+    .select2-selection--single {
+      height: $formH; 
+      background: rgba(0, 0, 0, 0.04); 
+      border: 1px solid rgba(0, 0, 0, 0.08); 
+      border-radius: 6px;
+      .select2-selection__rendered { font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.01em;
+        color: #000;
+        padding: 18px 20px;
+       }
+      .select2-selection__arrow { top:0; right:20px; height: $formH; width: 24px;  
+        b { position: relative; 
+          display: block; width: 24px; height: 24px; border: 0;
+          margin: 0; margin-top: -12px; margin-right: 15px; left: 0;
+          &::before, &::after { content:""; position: absolute;  
+          top:12px; left: 10px;
+          display: block; width: 10px; height: 2px; background-color: #000;
+          border-radius: 2px;
+          }
+          &::before { 
+            margin-left: -6px; @include transform( rotate(45deg) );}
+          &::after  { 
+            margin-right: -6px; @include transform( rotate(-45deg) );}
+        }
+      }
+      @media all and (max-width:$G-wMobile)  {
+        height: $formH-mb; border-radius: 4px;
+        .select2-selection__rendered { font-weight: 500;
+          padding: 16px 47px 16px 20px;
+          font-size: 14px; line-height: 22px; border-radius: 4px;
+         }
+        .select2-selection__arrow { top:0; right:22px; height: $formH-mb; width: 12px; 
+          b { position: relative; 
+            display: block; width: 12px; height: 12px; border: 0;
+            margin: 0; margin-top: -6px; margin-right: 8px; left: 0;
+            &::before, &::after { 
+            top:6px; left: 5px; width: 6px; height: 1px;  border-radius:  1px;
+            }
+            &::before {  margin-left: -4px;}
+            &::after  {  margin-right: -4px;}
+          }
+        }
+      }
+    }
+    &.select2-container--open {
+      .select2-selection--single .select2-selection__arrow {
+        b { @include transform( rotate(180deg) ); }
+      }
+    }
+
+    &.select2-container--disabled {
+      .select2-selection--single{ 
+        // border-color: $dvDefault; background-color: $cg2; 
+        .select2-selection__rendered{ color:rgba(0, 0, 0, 0.2);}
+        .select2-selection__arrow b { opacity: 0.2;
+          @media screen and (max-width:$G-wMobile) {   }
+        }
+      }
+    }
+  } 
+  .select2-container {z-index:200;}
+
+  // 선택 오버, 활성화   
+  .select2-container--default { 
+    .select2-results__option { padding:0 15px;
+      line-height: 40px;
+    }
+    .select2-results__option--highlighted[aria-selected] { 
+      color: $colorD; background-color:$colorBGg; 
+    }
+    .select2-results__option[aria-selected=true] { 
+      color:$colorD; background-color:$colorBGg/*$colorMain*/; 
+    }
+  }
+}
+
+/* === select2-dropdown 레이어=== */
+.select2-dropdown { border-radius: 0; background-color: $colorBGw; z-index: 300; //22.1027
+  &.select2_round { 
+    padding: 20px 2px; border: 1px solid #000; margin-top: 8px; //border-radius: ($form_sortH / 2);  
+    /* 상단 팝업 */
+    &.select2-dropdown--above { margin-top: -8px; }
+    .select2-results {
+      .select2-results__option{ padding: 8px 20px;
+          color: #000000;font-weight: 500;
+          font-size: 16px; line-height: 24px;
+          letter-spacing: -0.02em;
+          &[aria-selected]     { background-color: $colorBGw; }
+          &[aria-selected=true] { background-color: rgba(0,0,0,.05); }
+      }
+    }
+
+    @media all and (max-width:$G-wMobile) { 
+      padding: 8px 2px; margin-top: 4px; //border-radius:($form_sortH-mb / 2);  
+      /* 상단 팝업 */
+      &.select2-dropdown--above { margin-top: -4px; }
+      .select2-results {
+        .select2-results__option{ padding: 6px 10px;
+          font-size: 12px; line-height: 20px;
+          letter-spacing: -0.01em; 
+        }
+      }
+    }
+  }
+
+  .select2-results__options { //max-height: 240px !important;
+    //@media all and (max-width:959px) { max-height: 130px !important; }
+    &::-webkit-scrollbar{ 
+      width: 4px; height: 4px; margin: 0 8px;
+      -webkit-appearance: none;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb { border-radius: 2px;
+      background-color: rgba(0,0,0, .08)
+    }
+  }
+}
+
+// pop 뎁스 조절 
+.select2-dropdown.select2_pop { z-index: 9900; }
+
+
+/* ========================  input file */
+.trp.file-box { position: relative; 
+  label.screen-reader-text { position:absolute; margin:-1px; padding:0; height:1px; width:1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+  .trp-Filetext { width: calc( 100% - 120px); height: $formH; padding: 8px 10px 8px 10px;
+    font-size: 16px; vertical-align: middle;   border: 1px solid $lineC_d; outline: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .btn { position: absolute; top:0px; right:0px; min-width: 110px;  height: $formH; background:#757575; color:$colorBGw; font-size:16px; font-weight: 300;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .trp-Filehidden { position: absolute; top:0; left:0; width:100%;  height: $formH;  opacity:0; cursor:pointer; z-index: 1;  }
+}
+
+/* ========================  jQuery datepicker */
+.datepicker-box { position: relative;  display: inline-block;  min-width: 155px; height: $formH;
+  background-color: #f2f2f2; 
+  input { width: 100%;  padding-right: 35px; z-index: 1; background-color: transparent; }
+  i { &::after { content: ""; display: block; width: 23px; height: 23px;
+      position: absolute; top: 8px; right: 8px; 
+      @include sprite($form-calender) }
+  }
+  &.type_label  { display: block; font-size: 0; 
+    label { position: relative; display: inline-block;  padding: 10px 13px 10px 15px;
+      font-size: 15px; color:$colorB; font-weight: bold;  width: 88px; box-sizing: border-box;
+      font-family: $baseFT;  line-height: 30px;
+      &::after { content: ''; display: block;  width: 1px; height: 15px; background-color: #d2d2d2;
+        position: absolute; top: 18px; right: 0px;
+      }
+    }
+    input { width: calc( 100% - 88px ); vertical-align: top; padding-right: 70px; 
+      text-align: center;
+    }
+  }
+
+}
+.ui-datepicker.ui-widget  { border: 1px solid #f3f3f3;  padding: 0; z-index:10000 !important;  @include shadow(0px, 0px, 25px, 0.05); }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-br, .ui-corner-right {  border-radius: 0;  }
+
+// 달력 타이틀
+.ui-datepicker .ui-datepicker-header {padding: 0; height: 40px; background-color: #ffffff;}
+.ui-datepicker-title { height: 40px; line-height: 38px; 
+  .ui-datepicker-month { line-height: 38px; color:$colorP;  }
+  .ui-datepicker-year  { line-height: 38px; color:$colorP;  }
+}
+.ui-datepicker .ui-datepicker-header { border: 0; border-bottom: 1px solid #f3f3f3; 
+  .ui-datepicker-prev  { top:7px; 
+    .ui-icon { position: relative; width: 100%; height:100%; margin: 0; padding: 0;
+      top:0; left:0;  background-image: none;
+      &::before { content: ""; display: block; width: 10px; height:1px;
+          position: absolute; top:9px; left:7px; 
+          background-color: #999999; @include rotate(-45deg);
+      }
+      &:after {content: ""; display: block; width: 10px; height:1px;
+          position: absolute; top:16px; left:7px; 
+          background-color: #999999; @include rotate(45deg);
+      }
+    }
+  }
+  .ui-datepicker-next  { top:7px; 
+    .ui-icon { position: relative; width: 100%; height:100%; margin: 0; padding: 0;
+      top:0; left:0;  background-image: none;
+      &::before { content: ""; display: block; width: 10px; height:1px;
+        position: absolute; top:9px; left:8px; 
+        background-color: #999999; @include rotate(45deg);
+      }
+      &:after {content: ""; display: block; width: 10px; height:1px;
+        position: absolute; top:16px; left:8px; 
+        background-color: #999999; @include rotate(-45deg);
+      }
+    }
+  }
+}
+// 일 달력
+.ui-datepicker-calendar { 
+  tbody {
+    tr {
+      td {
+        .ui-state-default { width: 20px; padding: .15em .2em .05em; line-height: 1.7;
+          text-align: center; border: 0; background-color: #fff; color:#777777; 
+        }
+      }
+      .ui-datepicker-today  .ui-state-default { 
+        color: #fff; background-color:$colorP; border-radius: 50%; }
+      .ui-datepicker-week-end:first-child  .ui-state-default { color:$colorP;  }
+      .ui-datepicker-week-end.ui-datepicker-today   .ui-state-default { color:#ffffff; }
+    }
+  }
+}
+/* 월 달력 */
+.datepicker-box {
+}
+.monthPicker {
+  .year{ height: 40px; background-color: #fff; border-bottom: 1px solid #f3f3f3;
+    strong { line-height: 28px; color: $colorP; font-size: 15px; font-weight: bold;}
+    &>span .changeYear {}
+    &>span:first-child { top: 6px; left:  2px;  }
+    &>span:last-child  { top: 6px; right: 2px; }
+    .prev-btn { width: 27px; height: 27px; border:0;
+      a { border: 0;
+        &::before { content: ""; display: block; width: 10px; height: 1px;
+          position: absolute; top: 9px; left: 7px;
+          background-color: #999;
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        &::after  { content: ""; display: block; width: 10px; height: 1px;
+          position: absolute; top: 16px; left: 7px;
+          background-color: #999;
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+      a:hover { background-color: #ededed; border: 1px solid #ccc;}
+    }
+    .next-btn { width: 27px; height: 27px; border:0;
+      a { border: 0;
+        &::before { content: ""; display: block; width: 10px; height: 1px; 
+          position: absolute; top:   9px; left: 8px;
+          background-color: #999;
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        &::after  { content: ""; display: block; width: 10px; height: 1px;
+          position: absolute; top: 16px; left: 8px;
+          background-color: #999;
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+      }
+      a:hover { background-color: #ededed; border: 1px solid #ccc;}
+    }
+  }
+}
+
+
+/* ========================  jQuery tooltip */
+/* icon_tooltip */
+.icon_tooltip { display: inline-block; width: 21px; height: 21px;
+  &:after { content: ""; display: block; @include sprite($form-tooltip); }   
+}
+
+.ui-tooltip{ 
+  font-size: 14px; color:$colorB;
+  &.ui-widget-shadow { box-shadow: 0 2px 1px 0 rgba(0,0,0,0.16)}
+  &.ui-widget.ui-widget-content {         
+    padding: 15px; 
+    border: 1px solid #aaaaaa; border-radius: 0;
+    .ui-tooltip-content { font-size: 14px; color:$colorB;
+      @include  wordBreak-all();
+    }
+  } 
+  .arrow { position: absolute;left: 50%; bottom: -15px;
+    overflow: hidden;  box-shadow: 0;     
+    @include sprite($form-dot_tooltip);  
+  }
+  .arrow.top  {top: -15px; bottom: auto;
+    @include sprite($form-dot_tooltip-top);  
+  }
+  .arrow.top:after {bottom: -15px;top: auto;}
+}

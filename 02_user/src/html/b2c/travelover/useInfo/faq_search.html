@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko"><!--translate="no"//-->
+  <head>
+    <%- include('../../../include/_head.ejs', { title: "Travelover" }) %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header //-->
+      <%- include('../../../include/_header.ejs') %>
+      <!-- header //-->
+
+      <!-- container -->
+      <div id="container">
+			  <div id="contents">
+          <section class="faq-section">
+            <div class="cont-inner">
+              <div class="cont-group">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "자주하는질문",
+                  "title_sub" : "자주 묻는 질문을 모두 알려드립니다.",
+                }) %>
+
+                <div class="search-box">
+                  <div class="search-inner">
+                    <div class="select-box"> 
+                      <select class="select2Basic" id="">
+                        <option value="제목">제목</option>
+                        <option value="내용">내용</option>
+                      </select>
+                      <i class="arrow"></i>
+                    </div>
+                    <span class="input_search">
+                      <input type="text" placeholder="검색어 입력" value="영수" class="">
+                      <button><i class="icon form-search"></i></button>
+                    </span>
+                    <button class="btn btn_sm btn_line" type="button"><span>검색</span></button>
+                  </div>
+                </div> 
+
+                <div id="tab-1" class="tab-container">
+                  <div class="tab-wrap">
+                    <ul class="tab-list tab-round">
+                      <li><a href="#" class="active" id="tabcont-1">전체</a></li>
+                      <li><a href="#" id="tabcont-2">가입</a></li>
+                      <li><a href="#" id="tabcont-3">결제</a></li>
+                      <li><a href="#" id="tabcont-4">청구</a></li>
+                      <li><a href="#" id="tabcont-5">가입</a></li>
+                    </ul>
+                    <div class="tab-panel">
+                      <!-- 전체 -->
+                      <div id="content-1" class="tab-cont">
+                        <div class="accordion-wrap has-faq">
+                          <ul class="accordion-list js-accordion_menu" id="accordion">
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[결제]</span>
+                                  <span class="accordion_name">카드 <em class="colorM">영수</em>증 발행은 어떻게 하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="btn_set-single">
+                          <div class="btn_item"> <a class="btn btn_default" href="#" role="button"><span>FAQ 전체보기</span></a> </div>
+                        </div>
+                      </div>
+                      <!-- 가입 -->
+                      <div id="content-2" class="tab-cont">
+                        <div class="accordion-wrap has-faq">
+                          <ul class="accordion-list js-accordion_menu" id="accordion">
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- 결제 -->
+                      <div id="content-3" class="tab-cont">
+                        <div class="accordion-wrap has-faq">
+                          <ul class="accordion-list js-accordion_menu" id="accordion">
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[결제]</span>
+                                  <span class="accordion_name">카드 <em class="colorM">영수</em>증 발행은 어떻게 하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div> 
+                      <!-- 청구 -->
+                      <div id="content-4" class="tab-cont">
+                        <div class="accordion-wrap has-faq">
+                          <ul class="accordion-list js-accordion_menu" id="accordion">
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="trp_acitem">
+                              <div class="header-area">
+                                <a href="#" class="acc_btn">
+                                  <span class="acco-type">[문의유형]</span>
+                                  <span class="accordion_name">여행자보험은 어떻게 가입하나요?</span>
+                                  <i class="icon icon-accordion_arrow_down"></i>
+                                </a>
+                              </div>
+                              <div class="con-area">
+                                <div class="con-desc">
+                                  <p>여행 출발 2시간 전까지 모바일 또는 PC홈페이지에서 직접 가입 진행해 주시면 됩니다.(고객센터를 통한 유선상 가입은 어렵습니다.)</p>
+                                  <p>기관/단체 또는 외국인의 경우, [홈페이지 > 이메일(단체)가입신청] 메뉴에서 약관동의 및 신청서를 작성해 주시고,<br>가입대상 명단을 첨부해 주셔서 가입신청해 주시면 담당자가 확인 후 처리해 드립니다.(신청 후 약2~3시간 소요)</p>
+                                  <p>※ 보험 가입대상자 명단 첨부 시 내국인은 이름과 주민번호 13자리 모두 필요<br>외국인은 이름과 외국인 등록번호 필요</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div> 
+                      <div id="content-5" class="tab-cont">탭 내용5</div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+			  </div>
+		  </div>
+		  <!-- //container -->
+
+      <!-- footer -->
+      <%- include('../../../include/_footer.ejs') %>
+      <!-- //footer --> 
+    </div>
+  </body>
+</html>

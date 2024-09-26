@@ -1,0 +1,32 @@
+/* ================== footer pc */
+#footer { background-color: #444;
+  .cont-inner { padding:34px 30px 60px;  }
+  .footer_logo { font-size: 16px; font-weight: 700; line-height: 20px; color: #fff;}
+
+
+  .footer_link-list { display: flex; margin-top: 30px; gap: 20px;
+    li { display: inline-flex; position: relative; padding-left: 20px;
+      &::before { content:""; display: inline-block ; width: 1px; height:14px; background-color:#999; position: absolute; left: 0 ; top: 50%; transform:translate(0, -50%);}
+      &:first-child { padding-left:0;
+        &::before { display: none;}
+      }
+      a { font-size: 14px; font-weight: 400; line-height: 18px; color: #fff; }
+    }
+  }
+
+  .footer_add { margin-top: -12px;
+    ul { display: flex; flex-wrap: wrap; gap: 20px; max-width: 50%;
+      li { display: inline-flex; margin:12px 0 0 ; position: relative; padding-left: 20px;
+        &::before { content:""; display: inline-block ; width: 1px; height:13px; background-color:#999; position: absolute; left: 0 ; top: 50%; transform:translate(0, -50%);}
+        &:first-child { padding-left:0;
+          &::before { display: none;}
+        }
+        span, strong, a { font-size: 12px; font-weight: 400; line-height: 15px; color: #999;}
+      }
+    }
+    .copyright { font-size: 10px; font-weight: 400; line-height: 13px; color: #999; margin-top: 12px;}
+  }
+
+  .footer_logo + .footer_add { margin-top: 8px;}
+  .footer_link-list + .footer_add { margin-top: 8px;}
+}

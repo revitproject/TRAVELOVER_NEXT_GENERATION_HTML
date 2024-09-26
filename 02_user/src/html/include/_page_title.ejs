@@ -1,0 +1,47 @@
+<% if( title_type == "" ) { %>
+<div class="title-section">
+  <div class="con-header">
+    <h2 class="title"><%= title_main %></h2>
+    <span class="sub_txt"><%= title_sub %></span>
+  </div>
+</div>
+<% } %>
+
+<%# - font-size 30 sub text 없을때 %>
+<% if( title_type == "type2" ) { %>
+<div class="title-section <%= title_type %>">
+  <div class="con-header">
+    <h2 class="title"><%= title_main %></h2>
+  </div>
+</div>
+ <% } %>
+ 
+ <%# - font-size 20 타이틀 %>
+<% if( title_type == "type3" ) { %>
+<div class="title-section <%= title_type %>">
+  <div class="con-header">
+    <h2 class="title"><%= title_main %></h2>
+    <span class="sub_txt"><%= title_sub %></span>
+  </div>
+</div>
+ <% } %>
+  
+ <%# - font-size 16 타이틀 %>
+<% if( title_type == "type4" ) { %>
+<div class="title-section <%= title_type %>">
+  <div class="con-header">
+    <h2 class="title"><%= title_main %></h2>
+  </div>
+</div>
+ <% } %>
+
+ <%# - font-size 16 타이틀 %>
+ <% if( title_type == "type5" ) { %>
+ <div class="title-section <%= title_type %>">
+   <div class="con-header">
+     <h2 class="title"><%= title_main %></h2>
+     <span class="flag <%= flag_type %>"><%= flag_text %></span>
+   </div>
+ </div>
+  <% } %>
+ 

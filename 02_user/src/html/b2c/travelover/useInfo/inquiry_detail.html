@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko"><!--translate="no"//-->
+  <head>
+    <%- include('../../../include/_head.ejs', { title: "Travelover" }) %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header //-->
+      <%- include('../../../include/_header.ejs') %>
+      <!-- header //-->
+
+      <!-- container -->
+      <div id="container">
+			  <div id="contents">
+          <section class="inquiry-section">
+            <div class="cont-inner">
+              <%- include('../../../include/_page_title.ejs', {
+                "title_type" : "",
+                "title_main" : "1:1문의",
+                "title_sub" : "궁금한 사항은 접수해주시며 신속하게 답변해드리겠습니다.", 
+              }) %>
+
+              <%- include('../../../include/_page_title.ejs', {
+                "title_type" : "type3",
+                "title_main" : "문의내용입력",
+                "title_sub" : "",
+              }) %>
+              
+              <div class="box-base">
+                <div class="form-list">
+                  <div class="input-group">
+                    <label for="selectType">문의유형</label>
+                    <div class="select-box"> 
+                      <select class="select2Basic" id="selectType">
+                        <option value="선택">선택</option>
+                      </select>
+                      <i class="arrow"></i>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="inpSubject">제목 (최대 000자)</label>
+                    <input type="text" placeholder="제목 입력" id="inpSubject">
+                  </div>
+                  <div class="input-group">
+                    <label for="inpName">이름</label>
+                    <input type="text" placeholder="이름 입력" id="inpName">
+                  </div>
+                  <div class="input-group has-phone">
+                    <label for="inpTel">연락처</label>
+                    <div class="input-wrap">
+                      <div class="select-box"> 
+                        <select class="select2Basic" id="inpTel">
+                          <option value="02">02</option>
+                        </select>
+                        <i class="arrow"></i>
+                      </div>
+                      <span class="dash">-</span>
+                      <input type="text" placeholder="" maxlength="4">
+                      <span class="dash">-</span>
+                      <input type="password" placeholder="" maxlength="4">
+                    </div>
+                  </div>
+                  <div class="input-group has-email">
+                    <label for="inpMailAddr">메일주소</label>
+                    <div class="input-wrap">
+                      <input type="text" placeholder="숫자 13자리" id="inpMailAddr">
+                      <span class="dash">@</span>
+                      <div class="select-box"> 
+                        <select class="select2Basic" id="">
+                          <option value="선택">선택</option>
+                          <option value="옵션1">옵션1</option>
+                          <option value="옵션2">옵션2</option>
+                        </select>
+                        <i class="arrow"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="inpMailAddr">내용 (최대 000자)</label>
+                    <div class="textarea-box">
+                      <textarea name="" id="" cols="30" rows="10" placeholder="내용입력"></textarea>
+                      <div class="byte_check">
+                        <em>0</em><span> / 200byte</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 답변 영역 -->
+              <div class="anwser-list">
+                <div class="form-list">
+                  <div class="input-group">
+                    <label for="inpAnswer">트래블로버 답변</label>
+                    <input type="text" placeholder="제목 입력" id="inpAnswer">
+                  </div>
+                  <div class="input-group">
+                    <label for="inpInquiry">추가문의 (최대 000자)</label>
+                    <div class="textarea-box">
+                      <textarea name="" id="" cols="30" rows="10" placeholder="내용입력"></textarea>
+                      <div class="byte_check">
+                        <em>0</em><span> / 200byte</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_set tac">
+                <a class="btn btn_md btn_line" href="#" role="button"><span>돌아가기</span></a>
+                <a class="btn btn_md btn_default" href="#" role="button"><span>문의하기</span></a>
+              </div>
+            </div>
+          </section>
+			  </div>
+		  </div>
+		  <!-- //container -->
+
+      <!-- footer -->
+      <%- include('../../../include/_footer.ejs') %>
+      <!-- //footer --> 
+    </div>
+  </body>
+</html>

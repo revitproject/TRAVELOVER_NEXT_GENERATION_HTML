@@ -1,0 +1,222 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$checkbox-login-off-name: 'checkbox_login-off';
+$checkbox-login-off-x: 0px;
+$checkbox-login-off-y: 0px;
+$checkbox-login-off-offset-x: 0px;
+$checkbox-login-off-offset-y: 0px;
+$checkbox-login-off-width: 46px;
+$checkbox-login-off-height: 45px;
+$checkbox-login-off-total-width: 94px;
+$checkbox-login-off-total-height: 92px;
+$checkbox-login-off-image: '/resources/images/common/sp_form.png';
+$checkbox-login-off: (0px, 0px, 0px, 0px, 46px, 45px, 94px, 92px, '/resources/images/common/sp_form.png', 'checkbox_login-off', );
+$form-calender-name: 'form-calender';
+$form-calender-x: 0px;
+$form-calender-y: 69px;
+$form-calender-offset-x: 0px;
+$form-calender-offset-y: -69px;
+$form-calender-width: 23px;
+$form-calender-height: 23px;
+$form-calender-total-width: 94px;
+$form-calender-total-height: 92px;
+$form-calender-image: '/resources/images/common/sp_form.png';
+$form-calender: (0px, 69px, 0px, -69px, 23px, 23px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-calender', );
+$form-checkbox-dim-name: 'form-checkbox-dim';
+$form-checkbox-dim-x: 46px;
+$form-checkbox-dim-y: 0px;
+$form-checkbox-dim-offset-x: -46px;
+$form-checkbox-dim-offset-y: 0px;
+$form-checkbox-dim-width: 24px;
+$form-checkbox-dim-height: 24px;
+$form-checkbox-dim-total-width: 94px;
+$form-checkbox-dim-total-height: 92px;
+$form-checkbox-dim-image: '/resources/images/common/sp_form.png';
+$form-checkbox-dim: (46px, 0px, -46px, 0px, 24px, 24px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-checkbox-dim', );
+$form-checkbox-off-name: 'form-checkbox-off';
+$form-checkbox-off-x: 0px;
+$form-checkbox-off-y: 45px;
+$form-checkbox-off-offset-x: 0px;
+$form-checkbox-off-offset-y: -45px;
+$form-checkbox-off-width: 24px;
+$form-checkbox-off-height: 24px;
+$form-checkbox-off-total-width: 94px;
+$form-checkbox-off-total-height: 92px;
+$form-checkbox-off-image: '/resources/images/common/sp_form.png';
+$form-checkbox-off: (0px, 45px, 0px, -45px, 24px, 24px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-checkbox-off', );
+$form-checkbox-on-name: 'form-checkbox-on';
+$form-checkbox-on-x: 24px;
+$form-checkbox-on-y: 45px;
+$form-checkbox-on-offset-x: -24px;
+$form-checkbox-on-offset-y: -45px;
+$form-checkbox-on-width: 24px;
+$form-checkbox-on-height: 24px;
+$form-checkbox-on-total-width: 94px;
+$form-checkbox-on-total-height: 92px;
+$form-checkbox-on-image: '/resources/images/common/sp_form.png';
+$form-checkbox-on: (24px, 45px, -24px, -45px, 24px, 24px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-checkbox-on', );
+$form-dot-tooltip-top-name: 'form-dot_tooltip-top';
+$form-dot-tooltip-top-x: 23px;
+$form-dot-tooltip-top-y: 69px;
+$form-dot-tooltip-top-offset-x: -23px;
+$form-dot-tooltip-top-offset-y: -69px;
+$form-dot-tooltip-top-width: 13px;
+$form-dot-tooltip-top-height: 15px;
+$form-dot-tooltip-top-total-width: 94px;
+$form-dot-tooltip-top-total-height: 92px;
+$form-dot-tooltip-top-image: '/resources/images/common/sp_form.png';
+$form-dot-tooltip-top: (23px, 69px, -23px, -69px, 13px, 15px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-dot_tooltip-top', );
+$form-dot-tooltip-name: 'form-dot_tooltip';
+$form-dot-tooltip-x: 36px;
+$form-dot-tooltip-y: 69px;
+$form-dot-tooltip-offset-x: -36px;
+$form-dot-tooltip-offset-y: -69px;
+$form-dot-tooltip-width: 13px;
+$form-dot-tooltip-height: 15px;
+$form-dot-tooltip-total-width: 94px;
+$form-dot-tooltip-total-height: 92px;
+$form-dot-tooltip-image: '/resources/images/common/sp_form.png';
+$form-dot-tooltip: (36px, 69px, -36px, -69px, 13px, 15px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-dot_tooltip', );
+$form-input-x-name: 'form-input-x';
+$form-input-x-x: 46px;
+$form-input-x-y: 24px;
+$form-input-x-offset-x: -46px;
+$form-input-x-offset-y: -24px;
+$form-input-x-width: 20px;
+$form-input-x-height: 20px;
+$form-input-x-total-width: 94px;
+$form-input-x-total-height: 92px;
+$form-input-x-image: '/resources/images/common/sp_form.png';
+$form-input-x: (46px, 24px, -46px, -24px, 20px, 20px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-input-x', );
+$form-radio-dim-name: 'form-radio-dim';
+$form-radio-dim-x: 48px;
+$form-radio-dim-y: 45px;
+$form-radio-dim-offset-x: -48px;
+$form-radio-dim-offset-y: -45px;
+$form-radio-dim-width: 20px;
+$form-radio-dim-height: 20px;
+$form-radio-dim-total-width: 94px;
+$form-radio-dim-total-height: 92px;
+$form-radio-dim-image: '/resources/images/common/sp_form.png';
+$form-radio-dim: (48px, 45px, -48px, -45px, 20px, 20px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-radio-dim', );
+$form-radio-off-name: 'form-radio-off';
+$form-radio-off-x: 70px;
+$form-radio-off-y: 0px;
+$form-radio-off-offset-x: -70px;
+$form-radio-off-offset-y: 0px;
+$form-radio-off-width: 24px;
+$form-radio-off-height: 24px;
+$form-radio-off-total-width: 94px;
+$form-radio-off-total-height: 92px;
+$form-radio-off-image: '/resources/images/common/sp_form.png';
+$form-radio-off: (70px, 0px, -70px, 0px, 24px, 24px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-radio-off', );
+$form-radio-on-name: 'form-radio-on';
+$form-radio-on-x: 70px;
+$form-radio-on-y: 24px;
+$form-radio-on-offset-x: -70px;
+$form-radio-on-offset-y: -24px;
+$form-radio-on-width: 24px;
+$form-radio-on-height: 24px;
+$form-radio-on-total-width: 94px;
+$form-radio-on-total-height: 92px;
+$form-radio-on-image: '/resources/images/common/sp_form.png';
+$form-radio-on: (70px, 24px, -70px, -24px, 24px, 24px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-radio-on', );
+$form-tooltip-top-name: 'form-tooltip-top';
+$form-tooltip-top-x: 49px;
+$form-tooltip-top-y: 69px;
+$form-tooltip-top-offset-x: -49px;
+$form-tooltip-top-offset-y: -69px;
+$form-tooltip-top-width: 12px;
+$form-tooltip-top-height: 10px;
+$form-tooltip-top-total-width: 94px;
+$form-tooltip-top-total-height: 92px;
+$form-tooltip-top-image: '/resources/images/common/sp_form.png';
+$form-tooltip-top: (49px, 69px, -49px, -69px, 12px, 10px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-tooltip-top', );
+$form-tooltip-name: 'form-tooltip';
+$form-tooltip-x: 70px;
+$form-tooltip-y: 48px;
+$form-tooltip-offset-x: -70px;
+$form-tooltip-offset-y: -48px;
+$form-tooltip-width: 21px;
+$form-tooltip-height: 21px;
+$form-tooltip-total-width: 94px;
+$form-tooltip-total-height: 92px;
+$form-tooltip-image: '/resources/images/common/sp_form.png';
+$form-tooltip: (70px, 48px, -70px, -48px, 21px, 21px, 94px, 92px, '/resources/images/common/sp_form.png', 'form-tooltip', );
+$spritesheet-width: 94px;
+$spritesheet-height: 92px;
+$spritesheet-image: '/resources/images/common/sp_form.png';
+$spritesheet-sprites: ($checkbox-login-off, $form-calender, $form-checkbox-dim, $form-checkbox-off, $form-checkbox-on, $form-dot-tooltip-top, $form-dot-tooltip, $form-input-x, $form-radio-dim, $form-radio-off, $form-radio-on, $form-tooltip-top, $form-tooltip, );
+$spritesheet: (94px, 92px, '/resources/images/common/sp_form.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

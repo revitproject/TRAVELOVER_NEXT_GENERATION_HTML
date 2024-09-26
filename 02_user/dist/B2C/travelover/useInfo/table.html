@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .button-area {display: flex;align-items: center;gap: 10px;}
+   /* 기본 테이블 스타일 */
+
+    .responsive-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .responsive-table th, .responsive-table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .responsive-table th {
+      background-color: #f2f2f2;
+    }
+
+    /* PC 화면에서 테이블 고정 레이아웃 */
+    @media (min-width: 768px) {
+      .responsive-table {
+        table-layout: fixed;
+      }
+    }
+
+    /* 모바일에서 반응형 테이블 스타일 */
+    @media (max-width: 767px) {
+      .responsive-table, 
+      .responsive-table thead, 
+      .responsive-table tbody, 
+      .responsive-table th, 
+      .responsive-table td, 
+      .responsive-table tr {
+        display: block;
+      }
+
+      .responsive-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      .responsive-table tr {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .responsive-table td {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        position: relative;
+        padding: 10px 0;
+      }
+
+      .responsive-table td:before {
+        content: attr(data-label);
+        flex-shrink: 0; /* data-label의 길이에 관계없이 본문 텍스트와 겹치지 않도록 고정 */
+        font-weight: bold;
+        padding-right: 10px;
+      }
+
+      .responsive-table td.hidden { justify-content: flex-start;  }
+      .responsive-table td.hidden .button-area { flex-direction: column; width: 100%;}
+      .responsive-table td.hidden .button-area button {width: 100%;}
+    }
+  </style>
+</head>
+<body>
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>청약번호</th>
+        <th>청약일</th>
+        <th>신청자</th>
+        <th>피보험자</th>
+        <th>여행일자</th>
+        <th>결제</th>
+        <th>옵션</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="청약번호">000000-000000000-00001</td>
+        <td data-label="청약일">2024-04-04 12:32:31</td>
+        <td data-label="신청자">김준배</td>
+        <td data-label="피보험자">김준배 외 0명</td>
+        <td data-label="여행일자">2024-08-01 00시 ~ 2024-09-21 23시</td>
+        <td data-label="결제">00.000원</td>
+        <td data-label="" class="hidden">
+          <div class="button-area">
+            <button class="button">계약관리</button>
+            <button class="button">증명서 발급</button>
+            <button class="button">서류요청</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="청약번호">000000-000000000-00001</td>
+        <td data-label="청약일">2024-04-04 12:32:31</td>
+        <td data-label="신청자">김준배</td>
+        <td data-label="피보험자">김준배 외 0명</td>
+        <td data-label="여행일자">2024-08-01 00시 ~ 2024-09-21 23시</td>
+        <td data-label="결제">00.000원</td>
+        <td data-label="" class="hidden">
+          <div class="button-area">
+            <button class="button">계약관리</button>
+            <button class="button">증명서 발급</button>
+            <button class="button">서류요청</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

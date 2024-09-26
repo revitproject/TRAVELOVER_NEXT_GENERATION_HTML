@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko"><!--translate="no"//-->
+  <head>
+    <%- include('../../../include/_head.ejs', { title: "Travelover" }) %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header //-->
+      <%- include('../../../include/_header.ejs') %>
+      <!-- header //-->
+
+      <!-- container -->
+      <div id="container">
+			  <div id="contents">
+          <section class="contract-section">
+            <div class="cont-inner">
+              <div class="cont-group">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "개인용 계약조회",
+                  "title_sub" : "피보험자 개인의 계약조회가 필요한 경우 이용해주세요.",
+                }) %>
+
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="option1" name="rdoContract" checked>
+                    <label for="option1" class="radio-btn">
+                      <i class="icon icon-individual-1"></i>
+                      <span class="label-text">
+                        <em>주민등록번호 조회</em>
+                        주민등록번호, 외국인등록번호<br>입력 후 본인인증을 통해 계약을 조회합니다.
+                      </span>
+                    </label>
+                  </div>
+                  
+                  <div class="radio-item">
+                    <input type="radio" id="option2" name="rdoContract">
+                    <label for="option2" class="radio-btn">
+                      <i class="icon icon-individual-2"></i>
+                      <span class="label-text">
+                        <em>청약번호 조회</em>
+                        청약번호를 입력 후 계약을 조회합니다.<br>(생년월일 가입자, 외국인등록번호 미소지자)
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cont-group">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "단체/기관용 계약조회",
+                  "title_sub" : "단체, 기관, 학교 등에서 단체로 가입할 경우, 가입인원 전체에대한 계약조회가 필요한 경우 이용해주세요.",
+                }) %>
+
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="option3" name="rdoContract">
+                    <label for="option3" class="radio-btn">
+                      <i class="icon icon-individual-3"></i>
+                      <span class="label-text">
+                        <em>신청자용 계약조회</em>
+                        신청자분의 정보를 입력 후 본인인증을 통해 계약을 조회합니다.<br>(단체, 기관, 학교 가입자)
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 주민등록번호 조회 -->
+              <div class="cont-group form-view" id="resident-info">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "주민등록번호 조회",
+                  "title_sub" : "",
+                }) %>
+
+                <div class="box-base col2">
+                  <div class="form-list">
+                    <div class="input-group">
+                      <label for="inpName">이름</label>
+                      <input type="text" placeholder="이름 입력" id="inpName">
+                    </div>
+                    <div class="input-group has-double">
+                      <label for="inpResident">주민등록번호</label>
+                      <div class="input-wrap">
+                        <input type="text" placeholder="숫자 6자리" maxlength="6" id="inpResident">
+                        <span class="dash">-</span>
+                        <input type="password" placeholder="숫자 7자리" maxlength="7" id="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="btn_set tac">
+                  <button class="btn btn_lg btn_default" type="button" disabled><span>본인인증</span></button>
+                </div>
+              </div>
+
+              <!-- 청약번호 조회 -->
+              <div class="cont-group form-view" id="subscription-info">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "청약번호 조회",
+                  "title_sub" : "",
+                }) %>
+              
+                <div class="box-base col2">
+                  <div class="form-list">
+                    <div class="input-group">
+                      <label for="inpName2">이름</label>
+                      <input type="text" placeholder="이름 입력" id="inpName2">
+                    </div>
+                    <div class="input-group has-double">
+                      <label for="inpResident2">생년월일/성별</label>
+                      <div class="input-wrap">
+                        <input type="text" placeholder="숫자 6자리" maxlength="6" id="inpResident2">
+                        <span class="dash">-</span>
+                        <input type="password" placeholder="숫자 7자리" maxlength="1" id="">
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <label for="inpSubscriptionNo">청약번호</label>
+                      <input type="text" placeholder="숫자 13자리" maxlength="13" id="inpSubscriptionNo">
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="btn_set tac">
+                  <button class="btn btn_lg btn_default" type="button" disabled><span>본인인증</span></button>
+                </div>
+              </div>
+
+              <!-- 신청자용 계약조회 -->
+              <div class="cont-group form-view" id="applicant-info">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "신청자용 계약조회",
+                  "title_sub" : "",
+                }) %>
+
+                <div class="box-base col2">
+                  <div class="form-list">
+                    <div class="input-group">
+                      <label for="inpName3">이름</label>
+                      <input type="text" placeholder="이름 입력" id="inpName3">
+                    </div>
+                    <div class="input-group has-phone">
+                      <label for="inpTel">연락처</label>
+                      <div class="input-wrap">
+                        <div class="select-box"> 
+                          <select class="select2Basic" id="inpTel">
+                            <option value="02">02</option>
+                          </select>
+                          <i class="arrow"></i>
+                        </div>
+                        <span class="dash">-</span>
+                        <input type="text" placeholder="1234" maxlength="4">
+                        <span class="dash">-</span>
+                        <input type="password" placeholder="5678" maxlength="4">
+                      </div>
+                    </div>
+                    <div class="input-group has-email">
+                      <label for="inpMailAddr">메일주소</label>
+                      <div class="input-wrap">
+                        <input type="text" placeholder="숫자 13자리" id="inpMailAddr">
+                        <span class="dash">@</span>
+                        <div class="select-box"> 
+                          <select class="select2Basic" id="">
+                            <option value="선택">선택</option>
+                            <option value="옵션1">옵션1</option>
+                            <option value="옵션2">옵션2</option>
+                          </select>
+                          <i class="arrow"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+			  </div>
+		  </div>
+		  <!-- //container -->
+
+      <!-- footer -->
+      <%- include('../../../include/_footer.ejs') %>
+      <!-- //footer --> 
+    </div>
+
+    <!-- page script -->
+    <script>
+      $(document).ready(function () {
+        function toggleView(showId) {
+          $('.form-view').hide();
+          $(showId).show(); 
+        }
+        toggleView('#resident-info'); // 초기값: 주민등록번호
+
+        // 라디오 버튼 클릭 시 해당하는 입력 영역 표시
+        $('input[name="rdoContract"]').on('change', function () {
+          const selectedOption = $('input[name="rdoContract"]:checked').attr('id');
+
+          switch (selectedOption) {
+            case 'option1': // 주민등록번호 조회
+              toggleView('#resident-info');
+              break;
+            case 'option2': // 청약번호 조회
+              toggleView('#subscription-info');
+              break;
+            case 'option3': // 신청자용 계약조회
+              toggleView('#applicant-info');
+              break;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

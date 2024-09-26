@@ -1,0 +1,230 @@
+/* ================== PAGING */
+.paging-area { width:100%; clear:both;position:relative; padding:20px 0px 0px; letter-spacing:0px; text-align:center;
+  .paging { position:relative; text-align:center; font-size: 0; 
+    a, strong { position:relative; display:inline-block;
+      min-width: 50px; height:50px; margin: 0 6px;
+      text-decoration:none; vertical-align:top;  box-sizing: border-box; vertical-align: middle;
+      em { line-height: 50px;  color: $colorB; font-weight: 600;}
+    }
+    strong.on { border-radius: 100%; background-color: $colorSub3;
+      em { font-size: 16px; color: $colorMain; font-weight: 600; }  
+    }
+    a:hover, a:focus  { border-radius: 100%; background-color: $colorSub3;
+      em { font-size: 16px; color: $colorMain; font-weight: 600; }  
+    }
+    a.prev, a.prev_end, a.next, a.next_end { border:0px; box-sizing: border-box; padding:0; margin:0;
+       min-width: 30px; height: 30px;
+      &:hover, &:focus {  border-radius: 0; background-color :transparent}
+    }
+    a.prev { margin-right: 6px;}
+    a.next { margin-left: 6px;}
+  }
+}
+
+/* ================== Button */
+//button align
+.btn_set { margin-top: 20px;}
+.btn_set-single  {
+  .btn_item { a, button, input[type="button"] { width: 100%; min-width: 100%;} }
+}
+
+/* ================== List */
+.list-wrap {
+  .list-base {
+    > li {
+      border-bottom: 1px solid $colorG1;
+      .list_link {
+        position: relative;
+        display: block;
+        padding: 20px 4px;
+        box-sizing: border-box;
+        .list_title {
+          span + .list_name { margin-top: 10px; }
+          .type {
+            color: $colorG6; font-size: 14px; line-height: 19px;
+            & + .list_name { margin-top: 2px; }
+          } 
+        }
+        .list_status { 
+          display: flex; justify-content: space-between; align-items: center; margin-top: 10px; 
+          .flag-wrap { min-width: 75px; text-align: center; }
+        }
+        .list_name {
+          display: block;
+          width: 100%;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 21px;
+          word-break: break-word;
+          > i { margin-left: 4px; vertical-align: bottom; }
+        }
+        .list_date { display: inline-block; color: $colorG6; font-size: 14px; font-weight: 500; line-height: 19px; }
+      }
+    }
+  }
+}
+// 리스트 상세
+.list-detail {
+  .detail_content {
+    border-bottom: 1px solid $colorG4;
+    .detail_head {
+      display: block;
+      padding-bottom: 12px;
+      color: $colorB;
+      border-bottom: 2px solid $colorB;
+      .title { display: block; font-size: 20px; font-weight: 700; line-height: 26px;  word-break: break-word; }
+      .date {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19px;
+      }
+    }
+    .detail_body {
+      padding: 30px 0 40px;
+      word-break: break-word;
+      > * { word-break: break-word; }
+    }
+  }
+}
+
+/* ================== Tab */
+.tab-list { overflow-x: auto;
+  &::-webkit-scrollbar { height: 3px; }/* 스크롤바의 너비 */
+  &::-webkit-scrollbar-thumb { border-radius: 3px; background: $colorMain; }/* 스크롤바의 색상 */
+  &::-webkit-scrollbar-track { background: $colorG1; }/*스크롤바 뒷 배경 색상*/
+}
+
+/* ================== Table */
+.table-title {
+  margin-bottom: 0; 
+  h3.none { display: none; }
+  .btn { 
+    width: 100%; padding: 18px 15px 18px;
+    > span { font-size: 18px; font-weight: 700; line-height: 24px; }
+  }
+  + .list-wrap { margin-top: 54px; }
+}
+.table { 
+  margin-top: 14px; border-top-width: 1px;
+  &.has-data {
+    thead, tbody, th, td, tr { display: block; }
+    tr { display: flex; flex-direction: column; margin-bottom: 10px; }
+    thead {
+      tr { position: absolute;  top: -9999px; left: -9999px; }
+    }
+    tbody { padding: 8px 0;
+      td {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        position: relative;
+        padding: 8px 0;
+        word-break: break-all;
+        &::before {
+          content: attr(data-label);
+          flex-shrink: 0;
+          color: $colorG6;
+          padding-right: 8px;
+        }
+        .btn_set { 
+          display: flex; flex-direction: column; gap: 10px; width: 100%;
+          .btn { width: 100%; }
+        }
+        &.label-hidden {
+          padding: 0;
+          &::before { padding-right: 0; }
+        }
+      }
+    }
+  }
+}
+
+/* ================== Box */
+.box-base {
+  display: block; padding: 20px; background: $colorG0; border-radius: 8px;
+ .box_title { 
+   display: flex; align-items: center; margin-bottom: 12px; 
+   i { margin-right: 2px; }
+   > span { color: $colorB; font-weight: 600; line-height: 21px; word-break: break-word; }
+ }
+ .box_data { 
+   line-height: 21px; word-break: break-word;
+   .link { color: $colorB; font-weight: 400; line-height: 21px; text-decoration: underline; word-break: break-word;
+     .byte { vertical-align: top; }
+   }
+ }
+
+ &.has-attach { padding: 20px; }
+ &.col2 { gap: 0; padding: 30px 20px;
+  .form-list {
+    display: block;
+  }
+    .input-group { 
+      display: block; margin-bottom: 30px;
+      > label { margin-bottom: 8px; margin-right: 0; } 
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+}
+
+/* ================== Input */
+.form-list { 
+  .input-group {
+    > label { display: block; font-size: 15px; font-weight: 600; } 
+    input { min-width: initial; }
+    &.has-double { 
+      .input-wrap { display: flex; align-items: center; gap: 7px;
+        input { min-width: initial; width: 100%; }
+      }
+    }
+    &.has-email { 
+      .input-wrap { flex-wrap: wrap; gap: 8px;
+        .dash { display: inline-block; width: 15px; }
+        input { width: calc(100% - 23px); min-width: initial; }
+        .select-box { min-width: 100%; }
+      }
+    }
+    &.has-phone {
+      .input-wrap { gap: 7px;
+        input { width: calc(100% / 3); min-width: initial; }
+      .select-box { width: calc(100% / 3); min-width: initial;
+          .select2-selection__rendered { padding-right: 46px; }
+        }
+      }
+    }
+    .select-box { max-width: initial; }
+  }
+}
+
+/* ================== Radio */
+.radio-group { flex-direction: column; gap: 20px;
+  .radio-item { max-width: 100%; 
+    .radio-btn { padding: 20px 42px 20px 22px; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+      .icon { margin-right: 12px; 
+        &:after { transform: scale(0.75); }
+      }
+      .label-text {
+        > em { display: block; margin-bottom: 8px; color: $colorB; font-size: 17px; font-weight: 700; line-height: 24px; } 
+      }
+    }
+  }
+  &.has-payment { gap: 10px;
+    .radio-btn { padding: 25px 30px; 
+      .icon { margin-right: 20px; }
+      .label-text > em { margin-bottom: 0; }
+    }
+  }
+}
+
+// nodata
+.nodata-wrap {
+  background: $colorGM;
+  border-radius: 20px;
+  padding: 40px;
+  &::before { margin-bottom: 14px; }
+  .nodata_title { font-size: 18px; line-height: 24px; }
+  .btn_set { margin-top: 40px; }
+}

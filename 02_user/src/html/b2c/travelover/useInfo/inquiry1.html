@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko"><!--translate="no"//-->
+  <head>
+    <%- include('../../../include/_head.ejs', { title: "Travelover" }) %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header //-->
+      <%- include('../../../include/_header.ejs') %>
+      <!-- header //-->
+
+      <!-- container -->
+      <div id="container">
+			  <div id="contents">
+          <section class="inquiry-section">
+            <div class="cont-inner">
+              <div class="cont-group">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "1:1문의",
+                  "title_sub" : "궁금한 사항은 접수해주시며 신속하게 답변해드리겠습니다.",
+                }) %>
+
+                <div class="box-base col2 is-center">
+                  <div class="form-list">
+                    <div class="input-group">
+                      <label for="inpName">이름</label>
+                      <input type="text" placeholder="이름 입력" id="inpName">
+                    </div>
+                    <div class="input-group has-phone">
+                      <label for="inpTel">연락처</label>
+                      <div class="input-wrap">
+                        <div class="select-box"> 
+                          <select class="select2Basic" id="inpTel">
+                            <option value="선택">선택</option>
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                            <option value="019">019</option>
+                            <option value="02">02</option>
+                          </select>
+                          <i class="arrow"></i>
+                        </div>
+                        <span class="dash">-</span>
+                        <input type="text" placeholder="" maxlength="4">
+                        <span class="dash">-</span>
+                        <input type="password" placeholder="" maxlength="4">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="btn_set-double">
+                  <div class="btn_item"><a class="btn btn_default" href="#" role="button"><span>Link 버튼</span></a></div>
+                  <div class="btn_item"><a class="btn btn_line" href="#" role="button"><span>Link 버튼</span></a></div>
+                </div> -->
+                <div class="btn_set tac">
+                  <a class="btn btn_md btn_line" href="#" role="button"><span>내 문의 보기</span></a>
+                  <a class="btn btn_md btn_default" href="#" role="button"><span>문의하기</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+			  </div>
+		  </div>
+		  <!-- //container -->
+
+      <!-- footer -->
+      <%- include('../../../include/_footer.ejs') %>
+      <!-- //footer --> 
+    </div>
+  </body>
+</html>

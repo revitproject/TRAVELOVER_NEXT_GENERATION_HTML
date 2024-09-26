@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko"><!--translate="no"//-->
+  <head>
+    <%- include('../../../include/_head.ejs', { title: "Travelover" }) %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header //-->
+      <%- include('../../../include/_header.ejs') %>
+      <!-- header //-->
+
+      <!-- container -->
+      <div id="container">
+			  <div id="contents">
+          <section class="inquiry-section">
+            <div class="cont-inner">
+              <div class="cont-group">
+                <%- include('../../../include/_page_title.ejs', {
+                  "title_type" : "type3",
+                  "title_main" : "1:1문의",
+                  "title_sub" : "궁금한 사항은 접수해주시며 신속하게 답변해드리겠습니다.",
+                }) %>
+                
+                <div class="nodata-wrap">
+                  <p class="nodata_title">문의하신 내용이 없습니다.</p>
+                  <p class="nodata_desc">원하는 답변을 찾지 못하셨나요? 문의하기를 통해 문의를 남겨주세요.</p>
+                  <div class="btn_set tac">
+                    <a class="btn_text" href="#" role="button">
+                      <span>문의하기</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+			  </div>
+		  </div>
+		  <!-- //container -->
+
+      <!-- footer -->
+      <%- include('../../../include/_footer.ejs') %>
+      <!-- //footer --> 
+    </div>
+  </body>
+</html>

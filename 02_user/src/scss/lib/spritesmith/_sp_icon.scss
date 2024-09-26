@@ -1,0 +1,90 @@
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+    $btn-layer_close: 240px 48px -240px -48px 40px 40px 312px 291px '/resources/images/common/sp_icon.png' 'btn-layer_close' 'sp_icon';
+    $form-calender: 288px 50px -288px -50px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'form-calender' 'sp_icon';
+    $form-calender_b: 288px 74px -288px -74px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'form-calender_b' 'sp_icon';
+    $form-checkboxCh_dim: 288px 98px -288px -98px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'form-checkboxCh_dim' 'sp_icon';
+    $form-checkbox_dim: 288px 122px -288px -122px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'form-checkbox_dim' 'sp_icon';
+    $form-checkbox_off: 288px 146px -288px -146px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'form-checkbox_off' 'sp_icon';
+    $form-checkbox_on: 288px 170px -288px -170px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'form-checkbox_on' 'sp_icon';
+    $form-input_del: 288px 194px -288px -194px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'form-input_del' 'sp_icon';
+    $form-radio_dim: 259px 88px -259px -88px 26px 26px 312px 291px '/resources/images/common/sp_icon.png' 'form-radio_dim' 'sp_icon';
+    $form-radio_off: 259px 114px -259px -114px 26px 26px 312px 291px '/resources/images/common/sp_icon.png' 'form-radio_off' 'sp_icon';
+    $form-radio_on: 0px 241px 0px -241px 26px 26px 312px 291px '/resources/images/common/sp_icon.png' 'form-radio_on' 'sp_icon';
+    $form-search: 288px 218px -288px -218px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'form-search' 'sp_icon';
+    $form-time: 240px 267px -240px -267px 23px 23px 312px 291px '/resources/images/common/sp_icon.png' 'form-time' 'sp_icon';
+    $form-tooltip_dot: 220px 190px -220px -190px 13px 15px 312px 291px '/resources/images/common/sp_icon.png' 'form-tooltip_dot' 'sp_icon';
+    $form-tooltip_dot_top: 270px 211px -270px -211px 13px 15px 312px 291px '/resources/images/common/sp_icon.png' 'form-tooltip_dot_top' 'sp_icon';
+    $form-tooltip_top: 268px 191px -268px -191px 12px 10px 312px 291px '/resources/images/common/sp_icon.png' 'form-tooltip_top' 'sp_icon';
+    $icon-accordion_arrow_down: 200px 160px -200px -160px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-accordion_arrow_down' 'sp_icon';
+    $icon-accordion_arrow_up: 0px 211px 0px -211px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-accordion_arrow_up' 'sp_icon';
+    $icon-ahead: 26px 241px -26px -241px 25px 25px 312px 291px '/resources/images/common/sp_icon.png' 'icon-ahead' 'sp_icon';
+    $icon-cheack: 288px 242px -288px -242px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-cheack' 'sp_icon';
+    $icon-cheack_dim: 101px 241px -101px -241px 24px 25px 312px 291px '/resources/images/common/sp_icon.png' 'icon-cheack_dim' 'sp_icon';
+    $icon-cheack_on: 198px 241px -198px -241px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-cheack_on' 'sp_icon';
+    $icon-check: 222px 241px -222px -241px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-check' 'sp_icon';
+    $icon-close: 246px 241px -246px -241px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-close' 'sp_icon';
+    $icon-delete: 125px 241px -125px -241px 24px 25px 312px 291px '/resources/images/common/sp_icon.png' 'icon-delete' 'sp_icon';
+    $icon-edit: 149px 241px -149px -241px 24px 25px 312px 291px '/resources/images/common/sp_icon.png' 'icon-edit' 'sp_icon';
+    $icon-end: 0px 267px 0px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-end' 'sp_icon';
+    $icon-equal: 24px 267px -24px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-equal' 'sp_icon';
+    $icon-error: 272px 159px -272px -159px 14px 14px 312px 291px '/resources/images/common/sp_icon.png' 'icon-error' 'sp_icon';
+    $icon-expand_down: 48px 267px -48px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-expand_down' 'sp_icon';
+    $icon-expand_down_on: 72px 267px -72px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-expand_down_on' 'sp_icon';
+    $icon-expand_up: 96px 267px -96px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-expand_up' 'sp_icon';
+    $icon-file_b: 120px 267px -120px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-file_b' 'sp_icon';
+    $icon-file_g: 144px 267px -144px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-file_g' 'sp_icon';
+    $icon-headset: 173px 241px -173px -241px 25px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-headset' 'sp_icon';
+    $icon-individual-1: 0px 0px 0px 0px 80px 80px 312px 291px '/resources/images/common/sp_icon.png' 'icon-individual-1' 'sp_icon';
+    $icon-individual-1_on: 80px 0px -80px 0px 80px 80px 312px 291px '/resources/images/common/sp_icon.png' 'icon-individual-1_on' 'sp_icon';
+    $icon-individual-2: 0px 80px 0px -80px 80px 80px 312px 291px '/resources/images/common/sp_icon.png' 'icon-individual-2' 'sp_icon';
+    $icon-individual-2_on: 80px 80px -80px -80px 80px 80px 312px 291px '/resources/images/common/sp_icon.png' 'icon-individual-2_on' 'sp_icon';
+    $icon-individual-3: 160px 0px -160px 0px 80px 80px 312px 291px '/resources/images/common/sp_icon.png' 'icon-individual-3' 'sp_icon';
+    $icon-individual-3_on: 160px 80px -160px -80px 80px 80px 312px 291px '/resources/images/common/sp_icon.png' 'icon-individual-3_on' 'sp_icon';
+    $icon-info: 272px 173px -272px -173px 14px 14px 312px 291px '/resources/images/common/sp_icon.png' 'icon-info' 'sp_icon';
+    $icon-menu_mo: 168px 267px -168px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-menu_mo' 'sp_icon';
+    $icon-minus: 288px 0px -288px 0px 24px 25px 312px 291px '/resources/images/common/sp_icon.png' 'icon-minus' 'sp_icon';
+    $icon-nodata: 240px 0px -240px 0px 48px 48px 312px 291px '/resources/images/common/sp_icon.png' 'icon-nodata' 'sp_icon';
+    $icon-pageNext: 30px 211px -30px -211px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-pageNext' 'sp_icon';
+    $icon-pageNextEnd: 60px 211px -60px -211px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-pageNextEnd' 'sp_icon';
+    $icon-pageNextEnd_on: 90px 211px -90px -211px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-pageNextEnd_on' 'sp_icon';
+    $icon-pageNext_on: 120px 211px -120px -211px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-pageNext_on' 'sp_icon';
+    $icon-pagePrev: 150px 211px -150px -211px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-pagePrev' 'sp_icon';
+    $icon-pagePrevEnd: 180px 211px -180px -211px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-pagePrevEnd' 'sp_icon';
+    $icon-pagePrevEnd_on: 210px 211px -210px -211px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-pagePrevEnd_on' 'sp_icon';
+    $icon-pagePrev_on: 240px 211px -240px -211px 30px 30px 312px 291px '/resources/images/common/sp_icon.png' 'icon-pagePrev_on' 'sp_icon';
+    $icon-payment-1: 0px 160px 0px -160px 50px 51px 312px 291px '/resources/images/common/sp_icon.png' 'icon-payment-1' 'sp_icon';
+    $icon-payment-2: 50px 160px -50px -160px 50px 51px 312px 291px '/resources/images/common/sp_icon.png' 'icon-payment-2' 'sp_icon';
+    $icon-payment-3: 100px 160px -100px -160px 50px 51px 312px 291px '/resources/images/common/sp_icon.png' 'icon-payment-3' 'sp_icon';
+    $icon-payment-4: 150px 160px -150px -160px 50px 51px 312px 291px '/resources/images/common/sp_icon.png' 'icon-payment-4' 'sp_icon';
+    $icon-pdf: 51px 241px -51px -241px 25px 25px 312px 291px '/resources/images/common/sp_icon.png' 'icon-pdf' 'sp_icon';
+    $icon-plus: 192px 267px -192px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-plus' 'sp_icon';
+    $icon-print: 76px 241px -76px -241px 25px 25px 312px 291px '/resources/images/common/sp_icon.png' 'icon-print' 'sp_icon';
+    $icon-refresh: 288px 25px -288px -25px 24px 25px 312px 291px '/resources/images/common/sp_icon.png' 'icon-refresh' 'sp_icon';
+    $icon-reply: 240px 88px -240px -88px 19px 71px 312px 291px '/resources/images/common/sp_icon.png' 'icon-reply' 'sp_icon';
+    $icon-search: 216px 267px -216px -267px 24px 24px 312px 291px '/resources/images/common/sp_icon.png' 'icon-search' 'sp_icon';
+    $icon-select_arrow: 259px 140px -259px -140px 22px 14px 312px 291px '/resources/images/common/sp_icon.png' 'icon-select_arrow' 'sp_icon';
+    $icon-tooltip: 240px 191px -240px -191px 14px 14px 312px 291px '/resources/images/common/sp_icon.png' 'icon-tooltip' 'sp_icon';
+    $icon-tooltip_black: 200px 190px -200px -190px 20px 21px 312px 291px '/resources/images/common/sp_icon.png' 'icon-tooltip_black' 'sp_icon';
+    $icon-tooltip_black_2x: 240px 159px -240px -159px 32px 32px 312px 291px '/resources/images/common/sp_icon.png' 'icon-tooltip_black_2x' 'sp_icon';
+    $icon-tooltip_on: 254px 191px -254px -191px 14px 14px 312px 291px '/resources/images/common/sp_icon.png' 'icon-tooltip_on' 'sp_icon';
+
+//ancestor
+    $sp_icon-width: 312px;
+    $sp_icon-height: 291px;
+    $sp_icon-image: '/resources/images/common/sp_icon.png';
+    $sp_icon-sprites: ($btn-layer_close, $form-calender, $form-calender_b, $form-checkboxCh_dim, $form-checkbox_dim, $form-checkbox_off, $form-checkbox_on, $form-input_del, $form-radio_dim, $form-radio_off, $form-radio_on, $form-search, $form-time, $form-tooltip_dot, $form-tooltip_dot_top, $form-tooltip_top, $icon-accordion_arrow_down, $icon-accordion_arrow_up, $icon-ahead, $icon-cheack, $icon-cheack_dim, $icon-cheack_on, $icon-check, $icon-close, $icon-delete, $icon-edit, $icon-end, $icon-equal, $icon-error, $icon-expand_down, $icon-expand_down_on, $icon-expand_up, $icon-file_b, $icon-file_g, $icon-headset, $icon-individual-1, $icon-individual-1_on, $icon-individual-2, $icon-individual-2_on, $icon-individual-3, $icon-individual-3_on, $icon-info, $icon-menu_mo, $icon-minus, $icon-nodata, $icon-pageNext, $icon-pageNextEnd, $icon-pageNextEnd_on, $icon-pageNext_on, $icon-pagePrev, $icon-pagePrevEnd, $icon-pagePrevEnd_on, $icon-pagePrev_on, $icon-payment-1, $icon-payment-2, $icon-payment-3, $icon-payment-4, $icon-pdf, $icon-plus, $icon-print, $icon-refresh, $icon-reply, $icon-search, $icon-select_arrow, $icon-tooltip, $icon-tooltip_black, $icon-tooltip_black_2x, $icon-tooltip_on, );
+    $sp_icon_sprites_name: (btn-layer_close, form-calender, form-calender_b, form-checkboxCh_dim, form-checkbox_dim, form-checkbox_off, form-checkbox_on, form-input_del, form-radio_dim, form-radio_off, form-radio_on, form-search, form-time, form-tooltip_dot, form-tooltip_dot_top, form-tooltip_top, icon-accordion_arrow_down, icon-accordion_arrow_up, icon-ahead, icon-cheack, icon-cheack_dim, icon-cheack_on, icon-check, icon-close, icon-delete, icon-edit, icon-end, icon-equal, icon-error, icon-expand_down, icon-expand_down_on, icon-expand_up, icon-file_b, icon-file_g, icon-headset, icon-individual-1, icon-individual-1_on, icon-individual-2, icon-individual-2_on, icon-individual-3, icon-individual-3_on, icon-info, icon-menu_mo, icon-minus, icon-nodata, icon-pageNext, icon-pageNextEnd, icon-pageNextEnd_on, icon-pageNext_on, icon-pagePrev, icon-pagePrevEnd, icon-pagePrevEnd_on, icon-pagePrev_on, icon-payment-1, icon-payment-2, icon-payment-3, icon-payment-4, icon-pdf, icon-plus, icon-print, icon-refresh, icon-reply, icon-search, icon-select_arrow, icon-tooltip, icon-tooltip_black, icon-tooltip_black_2x, icon-tooltip_on, );
+    $sp_icon: (312px, 291px, '/resources/images/common/sp_icon.png', $sp_icon-sprites, );
+
+//mixin
+
+        %sp_icon {
+        background-image: url('/resources/images/common/sp_icon.png');
+        }
+
+        @mixin sp_icon($sprite) {
+        @extend %sp_icon;
+        @include spriteSizeSupport1x($sprite);
+        @include spriteBackgroundPositionSupport1x($sprite);
+        }

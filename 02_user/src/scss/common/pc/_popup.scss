@@ -1,0 +1,150 @@
+/* ================== 팝업 레이아웃 */  
+/** //popup-wrap **/
+.popup-dim {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; background: #000000; opacity: 0; z-index: 9000;
+}
+.popup-wrap { position: fixed; top: 0;left: 0; width: 100%;  height: 100%;min-height: 100%; z-index: 9000;  -webkit-overflow-scrolling: touch;  display: none;display: none;
+  .popup-dim { background: #000000; opacity: 0.5; filter: alpha(opacity=50); z-index: 0; }
+  .popup-align { display: table;*display: block; table-layout: fixed;  width: 100%; height: 100%; text-align: center;
+    .popup-vertical {  display: table-cell; width: 100%; margin: 0; text-align: center;vertical-align: middle; 
+      // @media all and (max-width:$G-wMobile)  { margin: 0;}
+    }
+    // /* 팝업 모드 */
+    // &.mode-full { position: relative; display: block; table-layout: initial;
+    //   .popup-vertical { display: block;  padding:0; height: 100%; } 
+    //   .popup-layer { width: 100%; height: 100%;
+    //     .pop-panel { height: 100%;
+    //       .pop-header { height: 132px; 
+    //       }
+    //       .pop-body   { margin-top: 82px; padding-top: 0; overflow-y: auto; 
+    //         height: calc( 100% - 82px  - 120px); 
+    //         //height: -webkit-fill-available;
+    //         //height: fill-available;
+    //         max-height: calc( 100vh - 82px - 120px); 
+    //         max-height: calc(var(--vh, 1vh) * 100 - 82px - 120px);
+    //       }
+    //       .pop-footer { height: 90px; 
+    //         .btn_bottom { margin-top: 0;}
+    //       }
+    //     }
+    //   }
+    // }
+  }
+
+  .popup-layer { position: relative; z-index: 1; display: inline-block;*display: inline;zoom: 1; border-radius: 20px; background: #fff; width: 490px;
+    .pop-panel { padding-bottom: 30px;
+      .pop-header { padding: 40px 30px 16px;
+        //position: absolute; left:30px; top:40px; right:30px;
+        .pop_tit { 
+          font-size: 20px; font-weight: 700; color:#000; line-height: 26px; letter-spacing: -0.02rem; text-align: left; margin-right: 34px;
+        }
+        .btn_close { position: absolute; top: 40px ; right: 30px; z-index: 10; font-size: 0px; line-height: 1; box-sizing: border-box; padding:0;}
+      }
+      .pop-body { max-height: 70vh; overflow: hidden; /* 화면 높이의 70%를 최대 높이로 설정 */
+        .section { position: relative; text-align: left; max-height: calc( 70vh - 120px); overflow-y: scroll; padding: 0 30px;
+          &::-webkit-scrollbar { width: 3px;}  /* 스크롤바의 너비 */
+          &::-webkit-scrollbar-thumb { border-radius: 3px; background: $colorMain;} /* 스크롤바의 색상 */
+          &::-webkit-scrollbar-track { background: $colorG1; } /*스크롤바 뒷 배경 색상*/
+        } // max-height: calc( 100vh - 192px); overflow-y: scroll;
+      }
+      .pop-footer { margin:0 30px 0; }
+    }
+
+    //popup footer btn
+    .btn_set { border-top:1px solid $colorG3; padding-top: 30px;
+      &.btn_set-double {
+        .btn_item:first-child { padding-right:5px;}
+        .btn_item:last-child { padding-left:5px;}
+      }
+    }
+  }
+
+
+  /* 알림, 컨펌레이어 */
+  &.popup_msg { 
+    .popup-layer { 
+      position: relative; z-index: 1; display: inline-block; /*display: inline;*/ zoom: 1; /*padding: 60px 40px 48px;*/ padding: 60px 40px 40px; min-width: 312px; background: #fff; height: auto; text-align: center; width: 480px; word-break: keep-all;
+      @media screen and (max-width:$G-wMobile) {
+        width: 328px;  /*padding: 32px 30px 16px;*/ padding: 60px 30px 16px; border-radius: 4px;
+      }
+
+      .pop-header { 
+        .btn-close { position: absolute; top: 24px; right: 24px; width: auto; margin: 0; line-height: 1;   box-sizing: border-box; font-size: 0px; 
+          .spf { 
+            &:before { width: 24px; height: 24px; font-size: 24px; }
+          }
+          @media screen and (max-width:$G-wMobile) {  top: 16px; right: 16px; padding: 3px;
+            .spf { 
+              &:before { width: 18px; height: 18px; font-size: 18px; }
+            }
+          }
+        }
+      }
+
+      .pop-body { padding:0;
+        .btn_set { margin-top: 32px;
+          .btn { width: 150px; height: 54px;  min-height:54px; padding: 10px 24px;
+            span { font-size:16px; line-height:28px;}
+            @media screen and (max-width:$G-wMobile) { width:100%; 
+              span { font-size:16px; line-height:28px;}
+            }
+          }
+          &.btn_set-double { 
+            .btn { width: 100%;}
+          }
+          @media screen and (max-width:$G-wMobile) { margin-top:50px;
+            .btn { width: 146px; }
+          }
+        }
+      }
+    }
+
+    .pop_msg_wrap {
+      .icon + .tit + .btn_set,
+      .tit + .txt + .btn_set { margin-top:40px;}
+    }
+
+    @media screen and (max-width:$G-wMobile) { 
+      .icon {margin-bottom:12px; margin-top:-28px;
+        .ico {width:54px; height:54px;}
+      }
+      // .tit { font-size: 16px; font-weight: bold; line-height: 24px; letter-spacing: 0.010em;}
+      .tit { font-size: 18px; font-weight: bold; line-height: 30px; letter-spacing: 0.010em;}
+      .txt { margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0.010em;}
+      
+      .pop_msg_wrap {
+        .icon + .tit + .btn_set,
+        .tit + .txt + .btn_set { margin-top:48px;}
+        .btn_set.btn_set-double {margin-left:-14px; margin-right:-14px;}
+      }
+      // &.login_msg,
+      // &.event_msg {
+      //   .btn_set {margin-top:50px;}
+      // }
+    }
+  }
+
+  /* 컨펌 Toast */
+  &.popup_toast_msg {
+    @include transition( all , .3s, ease-out );
+    .popup-layer {background:none;}
+    .toast_msg_wrap {
+      display:flex; justify-content: flex-start; align-items: center; text-align:left; min-width:648px; padding:31px 32px; border-radius:60px; border:1px solid #000; background:rgba(29, 29, 34, 0.95); box-shadow:0px 10px 20px rgba(0, 0, 0, 0.2);
+      .icon {margin-right:16px;
+        i {vertical-align:top;}
+      }
+      .text {color:#fff; font-size: 28px; font-weight: 700; line-height: 40px; letter-spacing: -0.02em;}
+    }
+    @media screen and (max-width:$G-wMobile) {
+      position: relative; top: auto; bottom: 640px; left: 50%; height: auto; min-height: auto; transform: translateX(-50%);
+      .pop-body {height:100%;}
+      .toast_msg_wrap {
+        position:absolute; bottom:125px; left:50%; transform: translateX(-50%); padding:18px; min-width:288px; width:calc(100vw - 32px); max-width:736px; box-shadow:0px 10px 10px rgba(0, 0, 0, 0.2);
+        .icon {margin-right:10px;}
+        .text {font-size:14px; line-height:22px; letter-spacing:-0.01em;}
+      }
+    }
+  }  
+
+
+}

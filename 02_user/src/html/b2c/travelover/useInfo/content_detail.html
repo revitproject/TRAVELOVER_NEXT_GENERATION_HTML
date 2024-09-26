@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko"><!--translate="no"//-->
+  <head>
+    <%- include('../../../include/_head.ejs', { title: "Travelover" }) %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header //-->
+      <%- include('../../../include/_header.ejs') %>
+      <!-- header //-->
+
+      <!-- container -->
+      <div id="container">
+			  <div id="contents">
+          <section class="notice-section">
+            <div class="cont-inner">
+              <div class="list-detail">
+                <div class="detail_content">
+                  <div class="detail_head">
+                    <strong class="title">[타이틀] 컨텐츠 타이틀 제목</strong>
+                    <span class="date">2024.08.22</span>
+                  </div>
+                  <div class="detail_body">
+                    <p>%컨텐츠 상세 내용%</p>
+                  </div>
+                </div>
+
+                <div class="btn_set btn_set-single">
+                  <div class="btn_item"><a class="btn btn_lg btn_line" href="#" role="button"><span>목록</span></a></div>
+                </div>
+              </div>
+            </div>
+          </section>
+			  </div>
+		  </div>
+		  <!-- //container -->
+
+      <!-- footer -->
+      <%- include('../../../include/_footer.ejs') %>
+      <!-- //footer --> 
+    </div>
+  </body>
+</html>

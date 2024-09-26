@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* _variables.scss */
+
+//root path
+//$G-path: '../';
+// $G-maxWidth   : 1920px;  // 디자인 최대크기
+$G-width      : 1440px;  // 사이트 컨텐츠 크기 여백포함
+$G-inWidth    : 1320px;  // 사이트 컨텐츠 크기
+$G-wMobile    : 959px;   // 미디어쿼리 모바일 960
+
+/* [이미지경로] img path */
+$GpathImg: '/_images/';
+
+/* [폰트 이름] fonts Name */
+$baseFT : "SUIT";
+// $subFT   : "Roboto";   // 나눔 스쿼어 (title, 영문, 숫자)
+
+// Color 
+$colorMain: #1E8162; // Primary 
+$colorSub1: #145943; //Secondary2
+$colorSub2 : #35D9B5; //Secondary
+$colorSub3 : rgba(30, 129, 98, 0.5); //Primary 50%
+
+// $colorBGg : #f8f8f8;
+$colorBGd : #1D1D22;
+$colorBGw : #ffffff;
+
+
+// fonts Name
+$colorR  : #FA2829;  // 에러, 경고, 포인트
+$colorB  : #000000;  // Black
+$colorW : #FFFFFF; //White
+$colorG9 : #767676; //Gray 900
+$colorG8 : #343434; //Gray 800
+$colorG7 : #5F5F5F; //Gray 700
+$colorG6 : #767676; //Gray 600
+$colorG5 : #8A8A8A; //Gray 500
+$colorG4 : #9F9F9F; //Gray 400 , input:placeholder
+$colorG3 : #B5B5B5; //Gray 300
+$colorG2 : #CACACA; //Gray 200
+$colorG1 : #DFDFDF; //Gray 100
+$colorG0 : #F5F5F5; //Gray 50
+$colorGM : #FAFAFA; //Gray 25
+
+
+
+// form Color
+$formH   : 42px    ;       // text, select 높이
+$formH-mb: 50px    ;       // text, select 높이
+$lineC_d : $colorG3 ;     // 라인 기본값
+$lineC_e : $colorR ;     // 라인 경고 에러
+$lineC_f : $colorB  ;    // 라인 포커스 
+   

@@ -1,0 +1,83 @@
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 300;
+  src: local(''),
+       url('./fonts/SUIT-Light.woff2') format('woff2'),
+       url('./fonts/SUIT-Light.otf') format('otf'),
+       url('./fonts/SUIT-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 400;
+  src: local(''),
+       url('./fonts/SUIT-Regular.woff2') format('woff2'),
+       url('./fonts/SUIT-Regular.otf') format('otf'),
+       url('./fonts/SUIT-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 500;
+  src: local(''),
+       url('./fonts/SUIT-Medium.woff2') format('woff2'),
+       url('./fonts/SUIT-Medium.otf') format('otf'),
+       url('./fonts/SUIT-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 600;
+  src: local(''),
+       url('./fonts/SUIT-SemiBold.woff2') format('woff2'),
+       url('./fonts/SUIT-SemiBold.otf') format('otf'),
+       url('./fonts/SUIT-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 700;
+  src: local(''),
+       url('./fonts/SUIT-Bold.woff2') format('woff2'),
+       url('./fonts/SUIT-Bold.otf') format('otf'),
+       url('./fonts/SUIT-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 800;
+  src: local(''),
+       url('./fonts/SUIT-ExtraBold.woff2') format('woff2'),
+       url('./fonts/SUIT-ExtraBold.otf') format('otf'),
+       url('./fonts/SUIT-ExtraBold.ttf') format('truetype');
+}
+
+.ft_l {  font-family: $baseFT;  font-weight: 300;}   // Light
+.ft_r {  font-family: $baseFT;  font-weight: 400; }   // Regular
+.ft_m {  font-family: $baseFT;  font-weight: 500; }   // Medium
+.ft_sb {  font-family: $baseFT;  font-weight: 600; }   // SemiBold
+.ft_b {  font-family: $baseFT;  font-weight: 700; }   // Bold
+.ft_bb { font-family: $baseFT;  font-weight: 800; }   // Black// 기본 컬러
+
+.fts_12 { font-size:12px; line-height: 16px;}
+.fts_14 { font-size:14px; line-height: 19px;}
+.fts_16 { font-size:16px; line-height: 21px;}
+.fts_18 { font-size:18px; line-height: 24px;}
+.fts_20 { font-size:20px; line-height: 26px;}
+.fts_22 { font-size:22px; line-height: 28px;}
+.fts_30 { font-size:30px; line-height: 38px;}
+
+
+/* 가이드용으로만듬 */
+.colorM { color:$colorMain}
+.colorS1 { color:$colorSub1}
+.colorS2 { color:$colorSub2}
+.colorS3 { color:$colorSub3}
+.colorR { color:$colorR}
+.colorB { color:$colorB}
+.colorW { color:$colorW}
+.colorG9 { color:$colorG9}
+.colorG8 { color:$colorG8}
+.colorG7 { color:$colorG7}
+.colorG6 { color:$colorG6}
+.colorG5 { color:$colorG5}
+.colorG4 { color:$colorG4}
+.colorG3 { color:$colorG3}
+.colorG2 { color:$colorG2}
+.colorG1 { color:$colorG1}
+.colorG0 { color:$colorG0}

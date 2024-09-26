@@ -1,0 +1,37 @@
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+    $form-calender: 26px 26px -26px -26px 24px 24px 100px 91px '/resources/images/common/sp_form.png' 'form-calender' 'sp_form';
+    $form-calender_b: 52px 0px -52px 0px 24px 24px 100px 91px '/resources/images/common/sp_form.png' 'form-calender_b' 'sp_form';
+    $form-checkboxCh_dim: 52px 24px -52px -24px 24px 24px 100px 91px '/resources/images/common/sp_form.png' 'form-checkboxCh_dim' 'sp_form';
+    $form-checkbox_dim: 0px 52px 0px -52px 24px 24px 100px 91px '/resources/images/common/sp_form.png' 'form-checkbox_dim' 'sp_form';
+    $form-checkbox_off: 24px 52px -24px -52px 24px 24px 100px 91px '/resources/images/common/sp_form.png' 'form-checkbox_off' 'sp_form';
+    $form-checkbox_on: 48px 52px -48px -52px 24px 24px 100px 91px '/resources/images/common/sp_form.png' 'form-checkbox_on' 'sp_form';
+    $form-input_del: 76px 0px -76px 0px 24px 24px 100px 91px '/resources/images/common/sp_form.png' 'form-input_del' 'sp_form';
+    $form-radio_dim: 0px 0px 0px 0px 26px 26px 100px 91px '/resources/images/common/sp_form.png' 'form-radio_dim' 'sp_form';
+    $form-radio_off: 26px 0px -26px 0px 26px 26px 100px 91px '/resources/images/common/sp_form.png' 'form-radio_off' 'sp_form';
+    $form-radio_on: 0px 26px 0px -26px 26px 26px 100px 91px '/resources/images/common/sp_form.png' 'form-radio_on' 'sp_form';
+    $form-search: 76px 24px -76px -24px 24px 24px 100px 91px '/resources/images/common/sp_form.png' 'form-search' 'sp_form';
+    $form-time: 76px 48px -76px -48px 23px 23px 100px 91px '/resources/images/common/sp_form.png' 'form-time' 'sp_form';
+    $form-tooltip_dot: 0px 76px 0px -76px 13px 15px 100px 91px '/resources/images/common/sp_form.png' 'form-tooltip_dot' 'sp_form';
+    $form-tooltip_dot_top: 13px 76px -13px -76px 13px 15px 100px 91px '/resources/images/common/sp_form.png' 'form-tooltip_dot_top' 'sp_form';
+    $form-tooltip_top: 26px 76px -26px -76px 12px 10px 100px 91px '/resources/images/common/sp_form.png' 'form-tooltip_top' 'sp_form';
+
+//ancestor
+    $sp_form-width: 100px;
+    $sp_form-height: 91px;
+    $sp_form-image: '/resources/images/common/sp_form.png';
+    $sp_form-sprites: ($form-calender, $form-calender_b, $form-checkboxCh_dim, $form-checkbox_dim, $form-checkbox_off, $form-checkbox_on, $form-input_del, $form-radio_dim, $form-radio_off, $form-radio_on, $form-search, $form-time, $form-tooltip_dot, $form-tooltip_dot_top, $form-tooltip_top, );
+    $sp_form_sprites_name: (form-calender, form-calender_b, form-checkboxCh_dim, form-checkbox_dim, form-checkbox_off, form-checkbox_on, form-input_del, form-radio_dim, form-radio_off, form-radio_on, form-search, form-time, form-tooltip_dot, form-tooltip_dot_top, form-tooltip_top, );
+    $sp_form: (100px, 91px, '/resources/images/common/sp_form.png', $sp_form-sprites, );
+
+//mixin
+
+        %sp_form {
+        background-image: url('/resources/images/common/sp_form.png');
+        }
+
+        @mixin sp_form($sprite) {
+        @extend %sp_form;
+        @include spriteSizeSupport1x($sprite);
+        @include spriteBackgroundPositionSupport1x($sprite);
+        }

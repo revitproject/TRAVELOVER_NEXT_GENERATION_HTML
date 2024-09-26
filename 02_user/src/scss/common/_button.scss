@@ -1,0 +1,129 @@
+/* ================== button */
+a.btn, a.btn_xsm, a.btn.btn_sm, a.btn.btn_md, a.btn.btn_lg,
+button.btn, button.btn.btn_xsm, button.btn.btn_sm, button.btn.btn_md, button.btn.btn_lg { font-size: 0; line-height: 0;}
+
+.btn {
+  position: relative; font-size: 16px; font-weight: 600; line-height: 21px; text-align: center; padding:14px 15px 13px; border:0; border-radius: 4px; cursor: pointer; box-sizing: border-box; display: inline-block; min-width: 210px; background-color: $colorW;
+  white-space: nowrap; vertical-align: middle;
+  user-select: none; background-image: none;
+  -ms-touch-action: manipulation; touch-action: manipulation;
+  -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none; -webkit-appearance: none; -moz-appearance: none;
+
+  span { font-size: 16px; line-height: 21px; box-sizing: border-box; vertical-align: middle; }
+}
+
+//비활성화
+.btn.disabled { background: $colorG1; color: $colorG4; pointer-events:none;
+  span { color: $colorG4;}
+  i { opacity: .4;}
+}
+.btn:disabled { background: $colorG1; color: $colorG4; pointer-events:none;
+  span { color: $colorG4;}
+  i { opacity: .4;}
+}
+.btn.btn_line:disabled, 
+.btn.btn_line.disabled,
+.btn.btn_gray_line:disabled,
+.btn.btn_gray_line.disabled,
+.btn.btn_black_line:disabled,
+.btn.btn_black_line.disabled {
+  background:$colorW; border-color: $colorG1;
+  span { background:$colorW; border-color: $colorG1; }
+}
+
+// btn size
+.btn.btn_xsm { padding: 3px 10px 7px; font-size: 12px; line-height: 16px; font-weight: 700; min-width: auto; max-height: 26px;
+  span { font-size: 12px; line-height: 16px; font-weight: 700;}
+  &:hover { border-width: 1px;}
+}
+.btn.btn_sm { padding: 12px 15px 11px; font-size: 14px; line-height: 19px; font-weight: 600;
+  span { font-size: 14px; line-height: 19px;}
+  &:hover { border-width: 1px;}
+}
+.btn.btn_md { font-size: 16px; font-weight: 600; line-height: 21px; padding:15px 15px 14px;
+  span { line-height: 21px;}
+}
+.btn.btn_lg { font-size: 18px; line-height: 24px; padding:18px 15px 18px; 
+  span { font-weight: 700; font-size: 18px; line-height: 24px;}
+}
+
+// line btn border 값으로 인한 padding 조정
+.btn_line, .btn_black_line, .btn_gray_line {
+  &.btn_lg { padding: 16px 15px 16px;}
+  &.btn_md { padding: 13px 15px 12px; }
+  &.btn_sm { padding: 11px 15px 10px; border-width: 1px;}
+  &.btn_xsm { border-width: 1px;}
+ }
+
+// btn color type
+.btn_default { background: $colorMain; color:$colorW;
+  span { color: $colorW}
+  &:hover { background: $colorSub1; }
+}
+.btn_line { border: 2px solid $colorMain; color:$colorMain;
+  span { color: $colorMain;}
+  &:hover { border: 2px solid $colorSub1; color:$colorSub1;
+    span { color: $colorSub1;}
+  }
+}
+.btn_gray_line { border: 2px solid $colorG2; ; color:$colorB; background-color: transparent;
+  span { color: $colorB}
+  &:hover { border-color: $colorB;
+  }
+}
+.btn_black_line { border: 2px solid $colorB; ; color:$colorB;
+  span { color: $colorB}
+  &:hover { background: $colorB; color:$colorW; 
+    span { color:$colorW; }
+  }
+}
+.btn_line_xsm { border: 1px solid rgba(14, 161, 95, 0.4); color:$colorMain;
+  background-color: transparent;
+  span { color: $colorMain;}
+  &:hover { border: 1px solid $colorSub1; color:$colorSub1;
+    span { color: $colorSub1;}
+  }
+}
+.btn_text { font-size: 18px; line-height: 22px; color:$colorMain; border-bottom:1px solid $colorMain;
+  span { color: $colorMain; font-size: 18px; line-height: 22px; }
+  &:hover { color: $colorSub1; border-color: $colorSub1;
+    span { color: $colorSub1; }
+  }
+  &.disabled { color: $colorG4; border-color: $colorG4; pointer-events:none;
+    span { color: $colorG4;}
+  }
+}
+
+.btn_icon_text { display: inline-flex; align-items: center;
+  span { font-size: 14px; font-weight: 500; line-height: 19px; color:$colorB;}
+  i + span { margin-left: 2px; text-decoration: underline}
+
+}
+
+//button align
+.btn_set { margin-top: 60px; @include clearfix(); 
+  &.tac { text-align: center;}
+  .btng-l  { float: left; }
+  .btng-r  { float: right;}
+  // .btn { min-width: auto;}
+}
+.btn_set-single  { text-align: center;  padding: 0px;
+  // .btn_item { a , button, input[type="button"] { width: 100%;} }
+}
+.btn_set-double { padding: 0px;
+  &::after { content: ""; display: block; clear: both;}
+  .btn_item { position: relative; width: 50%; float: left; 
+    a, button, input[type="button"] { width: 100%;} 
+  }
+  .btn_item:first-child { padding-right:5px; }
+  .btn_item:last-child  { padding-left:5px;  }
+}
+.btn_set-triple { padding: 0px;
+  &::after { content: ""; display: block; clear: both;}
+  .btn_item { position: relative; width: 33.3333%; padding: 0 4px; float: left; 
+    a, button, input[type="button"] { width: 100%;} 
+  }
+  .btn_item:first-child { padding-left:0px; }
+  .btn_item:last-child  { padding-right:0px; }
+}
+

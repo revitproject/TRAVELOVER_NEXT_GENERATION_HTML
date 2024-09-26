@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>UI guide</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <link rel="stylesheet" href="../resources/js/library/css/jquery-ui.css">
+  <link rel="stylesheet" href="../resources/css/b2c_pc.css">
+  <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
+  <![endif]-->
+  <script src="../resources/js/library/jquerylibrary.js"></script>
+  <script src="../resources/js/library/jquery-ui.js"></script>
+  <script src="../resources/js/common_pub.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-light.min.css">
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js" ></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  
+    
+  <style>
+    .guide.wrap { width: 1080px; margin:0 auto; background-color: #fff;}
+    .guide.wrap #guide_container { padding-top:0; }
+    .guide_h1 { padding: 20px; font-size: 30px; text-align: center; color:black; line-height: 38px;}
+    .guide_h2 { position: relative; background-color: #333; color: aliceblue; padding:7px 10px; height:40px; cursor: pointer; font-size: 20px; font-weight: bold; }
+    .guide_h2:hover:after { content: "scrolltop"; margin-left: 30px; font-size:13px; color: crimson; vertical-align: middle;}
+    .guide_h3 { position: relative; background-color: #aaa; padding: 3px 20px; font-size: 16px; font-weight: bold;  color: aliceblue;}
+    .api_link, .api_link:link { position: absolute; right:10px;color:#fab309; font-weight: bold; text-decoration: underline;}
+    .guide .item-inner { position: relative; margin-bottom: 20px; }
+    .guide .item-inner iframe #trp-debug{ display: none; }
+    .guide .item-inner samp {  }
+    .guide .item-inner .codelabel-btn{ position: absolute; top: 0; right: 0; width: 75px; height: 25px; opacity: 0.70; background-color: #000; font-size: 13px; color:#aaa;  z-index: 1; }
+    .guide .item-inner .codelabel-btn.show { opacity: 0; }
+    .guide .item-inner pre { display:none; position: relative; margin-top: 15px; min-height: 25px; border:1px solid #ccc; background-color: #fafafa; }    
+    .guide .item-inner code { display: block; }
+    .guide .item-inner code.html::before{ content: "[ HTML ]"; display: inline-block; padding: 2px 5px; position: absolute; top:0; right: 0;
+    font-family: Malgun Gothic; font-size: 15px; font-weight: bold; color:#fff; background-color: #ff8c88; border-radius: 0 0 5px 5px;  }
+    .guide .item-inner code.css::before{ content: "[ CSS ]"; display: inline-block; padding: 2px 5px; position: absolute; top:0; right: 0;
+    font-family: Malgun Gothic; font-size: 15px; font-weight: bold; color:#fff; background-color: #85d8d8; border-radius: 0 0 5px 5px;  }
+    .guide .item-inner code.js::before{ content: "[ JS ]"; display: inline-block; padding: 2px 5px; position: absolute; top:0; right: 0;
+    font-family: Malgun Gothic; font-size: 15px; font-weight: bold; color:#fff; background-color: #fab309; border-radius: 0 0 5px 5px;  }
+    .guide .item-inner code { font-family: verdana; font-size: 12px;  max-height: 300px; overflow-y: auto;  }
+    .guide .tab_guide-list { overflow: hidden; list-style-type:none; }
+    .guide .tab_guide-list li { float: left;  }
+    .guide .tab_guide-list li a { display: block; margin: 10px;padding: 7px 15px;font-weight: bold;color: #fff;background-color: #11a0d8;border: 0;border-radius: 5px;}
+    .guide #guide_footer { background-color: #333333; width: 100%;  min-width:1080px;}
+    .guide #guide_footer .footer-inner { position: relative; width: 1080px;  margin: 0 auto;  padding: 20px 30px; color:#ccc;  font-size: 11px; }
+  </style>
+
+</head>
+<body>
+<div class="wrapper">
+  <div class="guide wrap">
+    <!-- header -->
+    <div id="guide_header">
+      <h1 class="guide_h1">UI guide <span class="fts_16">[9월9일 기준]</span></h1>
+      <!-- <ul class="tab_guide-list">
+        <li><a href="#from">from</a></li>
+        <li><a href="#from_expansion">from(expansion)</a></li>
+        <li><a href="#button">버튼</a></li>
+        <li><a href="#paging">페이징</a></li>
+        <li><a href="#tabmenu">텝메뉴</a></li>
+        <li><a href="#accordion">아코디언메뉴</a></li> 
+        <li><a href="#layer_popup">레이어팝업</a></li>
+        <li><a href="#scrollbar">스크롤바</a></li>
+        <li><a href="#gallery">gallery</a></li>
+      </ul> -->
+    </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div id="guide_container">
+      <div class="guide_contents">
+
+        <div class="article" id="from">
+          <h2 class="guide_h2">Text</h2>
+          <h3 class="guide_h3">- Title guide </h3>
+          <div class="item-inner">
+<samp class="sample  js-source"  data-sample="code">
+<!-- page title  -->
+<%- include('../include/_page_title.ejs', {
+  "title_type" : "",
+  "title_main" : "page title font size 30",
+  "title_sub" : "sub text  font size 14", 
+  
+}) %>
+
+<!-- page title  -->
+<%- include('../include/_page_title.ejs', {
+  "title_type" : "type2",
+  "title_main" : "page title font size 30",
+}) %>
+
+<!-- page title  -->
+<%- include('../include/_page_title.ejs', {
+  "title_type" : "type3",
+  "title_main" : "page title font size 20",
+  "title_sub" : "sub text  font size 14",
+}) %>
+
+<!-- page title  -->
+<%- include('../include/_page_title.ejs', {
+  "title_type" : "type4",
+  "title_main" : "page title font size 16",
+}) %>
+
+<!-- page title  -->
+<%- include('../include/_page_title.ejs', {
+  "title_type" : "type5",
+  "title_main" : "page title font size 16",
+  "flag_type" : "type1",
+  "flag_text" : "결제완료",
+}) %>
+
+</samp>
+          </div>
+
+
+          <h3 class="guide_h3">- text guide </h3>
+          <div class="item-inner">
+<samp class="sample  js-source"  data-sample="code">
+  <div class="btn_set">
+    <div class="fl">
+      <p class="ft_l">Sample text Light</p>
+      <p class="ft_r">Sample text Regular</p>
+      <p class="ft_m">Sample text Medium</p>
+      <p class="ft_sb">Sample text SemiBold</p>
+      <p class="ft_b">Sample text Bold</p>
+      <p class="ft_bb">Sample text ExtraBold</p>
+    </div>
+    <div class="fl" style="margin-left:30px">
+      <p class="ft_b fts_12">Sample text size12 Bold</p>
+
+      <p class="ft_l fts_14">Sample text size14 Light</p>
+      <p class="ft_r fts_14">Sample text size14 Regular</p>
+      <p class="ft_m fts_14">Sample text size14 Medium</p>
+      <p class="ft_sb fts_14">Sample text size14 SemiBold</p>
+
+      <p class="ft_r fts_15">Sample text size15 Regular</p>
+      <p class="ft_sb fts_15">Sample text size15 SemiBold</p>
+
+      <p class="ft_m fts_16">Sample text size16 Regular</p>
+      <p class="ft_sb fts_16">Sample text size16 SemiBold</p>
+      <p class="ft_bb fts_16">Sample text size16 ExtraBold</p>
+
+      <p class="ft_l fts_18">Sample text size18 Light</p>
+      <p class="ft_r fts_18">Sample text size18 Regular</p>
+      <p class="ft_m fts_18">Sample text size18 Medium</p>
+      <p class="ft_sb fts_18">Sample text size18 SemiBold</p>
+      <p class="ft_b fts_18">Sample text size18 ExtraBold</p>
+
+      <p class="ft_b fts_20">Sample text size20 Bold</p>
+
+      <p class="ft_sb fts_22">Sample text size22 SemiBold</p>
+
+      <p class="ft_sb fts_30">Sample text size30 SemiBold</p>
+    </div>
+  </div>
+</samp>
+          </div>
+
+          <h3 class="guide_h3">- color </h3>
+          <div class="item-inner">
+<samp class="sample  js-source"  data-sample="code">
+  <p class="colorM">text color - Primary</p>
+  <p class="colorS1">text color - Secondary2</p>
+  <p class="colorS2">text color - Secondary </p>
+  <p class="colorS3">text color - Primary 50% </p>
+  <p class="colorR">text color - Error</p>
+  <p class="colorB">text color - Black</p>
+  <p class="colorW" style="background:#ccc">text color - White </p>
+  <p class="colorG9">text color - Gray 900 </p>
+  <p class="colorG8">text color - Gray 800 </p>
+  <p class="colorG7">text color - Gray 700 </p>
+  <p class="colorG6">text color - Gray 600 </p>
+  <p class="colorG5">text color - Gray 500 </p>
+  <p class="colorG4">text color - Gray 400 </p>
+  <p class="colorG3">text color - Gray 300 </p>
+  <p class="colorG2">text color - Gray 200 </p>
+  <p class="colorG1">text color - Gray 100 </p>
+  <p class="colorG0"style="background:#ccc">text color - Gray 50 </p>
+</samp>
+          </div>
+
+          <h3 class="guide_h3">- flag</h3>
+          <div class="item-inner">
+<samp class="sample  js-source"  data-sample="code">
+  <span class="flag type1">flag type1</span>
+  <span class="flag type2">flag type2</span>
+  <span class="flag type3">flag type3</span>
+  <span class="flag type4">flag type4</span> 
+  <span class="flag type5">공식블로그 type5</span>
+  <span class="flag type6">공식블로그 type6</span>
+  <span class="flag type7">공식블로그 type7</span>
+</samp>
+          </div>
+
+          <h3 class="guide_h3">- icon </h3>
+          <div class="item-inner">
+<samp class="sample  js-source"  data-sample="code">
+  <i class="icon form-input-x"></i>
+  <i class="icon form-search"></i>
+  <i class="icon icon-delete"></i>
+  <i class="icon icon-edit"></i>
+  <i class="icon icon-refresh"></i>
+  <i class="icon icon-end"></i>
+  <i class="icon icon-file_g"></i>
+  <i class="icon icon-file_b"></i>
+  <i class="icon icon-check"></i>
+  <i class="icon icon-pdf"></i>
+  <i class="icon icon-print"></i>
+  <i class="icon icon-headset"></i>
+  <i class="icon icon-ahead"></i>
+
+  <br/>
+ 
+  <i class="icon icon-tooltip"></i>
+  <i class="icon icon-accordion_arrow_down"></i>
+  <i class="icon icon-accordion_arrow_up"></i>
+  <i class="icon icon-error"></i>
+  <i class="icon icon-info"></i>
+  <i class="icon page_prev"></i>
+  <i class="icon page_prevEnd"></i>
+  <i class="icon page_next"></i>
+  <i class="icon page_nextEnd"></i>
+  <i class="icon btn_close"></i>
+  <span style=" background: #ccc; display: inline-block; line-height: 0; vertical-align: baseline;"><i class="icon icon-gnb_open"></i></span>
+  <i class="icon icon-cheack"></i>
+  <span style=" background: #ccc; display: inline-block; line-height: 0; vertical-align: baseline;"><i class="icon icon-cheack_on"></i></span>
+  <i class="icon icon-cheack_dim"></i>
+  <i class="icon icon-plus"></i>
+  <i class="icon icon-minus"></i>
+  <i class="icon icon-equal"></i>
+  <i class="icon "></i>
+</samp>
+          </div>
+        </div>
+
+        <div class="article" id="from">
+          <h2 class="guide_h2">form</h2>
+          <h3 class="guide_h3">- input:text </h3>
+          <div class="item-inner">
+<samp class="sample  js-source"  data-sample="code">
+  <span class="required">* 필수입니다.</span>
+  <input type="text" placeholder="활성화 pc 42x / 모바일 50px" id="" >
+  <input type="text" placeholder="비활성화" disabled id="">
+  <input type="text" placeholder="오류" value="오류일때" id="" class="input_error">
+  <div class="error_ch">
+    <i class="icon icon-error"></i>
+    <p class="error_txt">Error Text</p>
+  </div>
+  <span class="input_del">
+    <input type="text" placeholder="text" value="input 삭제" class="">
+    <button><i class="icon form-input-x"></i></button>
+  </span>
+  <span class="input_search">
+    <input type="text" placeholder="text" value="" class="" >
+    <button><i class="icon form-search"></i></button>
+  </span>
+</samp>
+          </div>
+
+          <h3 class="guide_h3">- textarea </h3>
+          <div class="item-inner">
+<samp class="sample  js-source"  data-sample="code">
+  <div class="textarea-box">
+    <textarea name="" id="" cols="30" rows="10" placeholder="내용입력"></textarea>
+  </div>
+
+  <div class="textarea-box">
+    <textarea name="" id="" cols="30" rows="10">요청 사항을 입력해 주세요</textarea>
+    <div class="byte_check">
+      <em>0</em><span> / 200byte</span>
+    </div>
+  </div>
+</samp>
+          </div>
+
+          <h3 class="guide_h3">- radio</h3>
+          <div class="item-inner">
+  <samp class="sample  js-source" data-sample="code">
+    <span class="trp radio-box">
+      <input type="radio" id="trp-radio1" name="radioSet1" checked>
+      <i></i>
+      <label for="trp-radio1">radio1 <br> radios</label>
+    </span>
+    <span class="trp radio-box">
+      <input id="radio1-2" type="radio" name="radioSet1">
+      <i></i>
+      <label for="radio1-2">radio2</label>
+    </span>
+    <span class="trp radio-box">
+      <input id="radio1-3" type="radio" name="radioSet1">
+      <i></i>
+      <label for="radio1-3">radio3</label>
+    </span> <br>
+
+    <span class="trp radio-box">
+      <input id="radio2-1" type="radio" name="radioSet2">
+      <i></i>
+      <label for="radio2-1">radioSet2</label>
+    </span>
+    <span class="trp radio-box">
+      <input id="radio2-2" type="radio" name="radioSet2">
+      <i></i>
+      <label for="radio2-2">radioSet2</label>
+    </span>
+    <span class="trp radio-box">
+      <input id="radio2-3" type="radio" name="radioSet2">
+      <i></i>
+      <label for="radio2-3">radioSet2</label>
+    </span>
+    <br/>
+    <span class="trp radio-box">
+      <input id="radio-disabled" type="radio" disabled name="">
+      <i></i>
+      <label for="radio-disabled">radio_disabled</label>
+  </span>
+    <span class="trp radio-box">
+      <input id="radio-disabled" type="radio" checked disabled name="">
+      <i></i>
+      <label for="radio-disabled">radio_checked disabled</label>
+  </span>
+  </samp>
+          </div>
+
+          <h3 class="guide_h3">- checkbox</h3>
+          <div class="item-inner">
+  <samp class="sample js-source" data-sample="code">
+    <div class="check_all-wrap js_all-check">
+        <span class="trp checkbox-box">
+            <input id="checkbox_all" class="js_all" type="checkbox" name="">
+            <i></i>
+            <label for="checkbox_all">전체</label>
+        </span>
+        <span class="trp checkbox-box">
+            <input id="checkbox_all1" class="js_item" type="checkbox" name="chk">
+            <i></i>
+            <label for="checkbox_all1">checkbox1</label>
+        </span>
+        <span class="trp checkbox-box">
+            <input id="checkbox_all2" class="js_item" type="checkbox" name="chk">
+            <i></i>
+            <label for="checkbox_all2">checkbox2</label>
+        </span>
+        <span class="trp checkbox-box">
+            <input id="checkbox_all3" class="js_item" type="checkbox" name="chk">
+            <i></i>
+            <label for="checkbox_all3">checkbox3</label>
+        </span>
+        <br/>
+        <span class="trp checkbox-box">
+          <input id="checkbox-disabled" type="checkbox" disabled name="">
+          <i></i>
+          <label for="checkbox-disabled">checkbox_disabled</label>
+      </span>
+        <span class="trp checkbox-box">
+          <input id="checkbox-disabled" type="checkbox" checked disabled name="">
+          <i></i>
+          <label for="checkbox-disabled">checkbox_check disabled</label>
+      </span>
+    </div>
+
+    
+    
+  </samp>
+          </div>
+
+          <h3 class="guide_h3">- 파일첨부</h3>
+          <div class="item-inner">
+  <samp class="sample js-source"  data-sample="code">
+    <div class="file-box">
+      <label for="fileName" class="screen-reader-text">파일첨부</label>
+      <input type="text" id="fileName" class="filetext">
+      <input type="button" class="btn btn_sm btn_gray_w" value="파일첨부">
+      <input type="file" class="filehidden" onchange="javascript: document.getElementById('fileName').value = this.value" title="Insert Attachment">
+    </div>
+  </samp>
+          </div>
+
+          <h3 class="guide_h3">- select</h3>
+          <div class="item-inner">
+  <samp class="sample js-source"  data-sample="code">
+    <div class="select-box"> 
+      <select class="select2Basic"  id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <i class="arrow"></i>
+    </div>
+  </samp>
+          </div>
+        </div>
+        
+        <div class="article" id="from_expansion">
+          <h2 class="guide_h2">from(expansion)</h2>
+ 
+          <h3 class="guide_h3">- datepicker(.datepicker-box .js-datepicker)
+            <a class="api_link" href="https://jqueryui.com/datepicker/" target="_blank">Plugin API</a>
+          </h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <span class="datepicker-box">
+    <input type="text" id="datepicker" class="js-datepicker" placeholder="YYYY-MM-DD">
+    <i></i>
+  </span>
+
+  <span class="datepicker-box">
+    <input type="text" id="datepicker" class="js-datepicker" placeholder="YYYY-MM-DD" disabled>
+    <i></i>
+  </span>
+  <script>
+     $(function(){
+         $('#datepicker').datepicker();
+      })
+</script>
+</samp>
+          </div>
+          
+
+
+          <h3 class="guide_h3">- starpoint(.starpoint-box)</h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="starpoint-box js-starpoint">
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+  </div>
+
+  <script>
+    // $(".js-starpoint .star").on("click", function(){
+    //   $(".js-starpoint .star").removeClass("on");
+    //   $(this).addClass("on").prevAll().addClass("on");
+    // })
+  </script>
+</samp>
+          </div>
+
+          <h3 class="guide_h3">- starpoint2 .5(.starpoint2-box)</h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="starpoint2-box js-starpoint2">
+    <span class="star"></span><span class="star"></span>
+    <span class="star"></span><span class="star"></span>
+    <span class="star"></span><span class="star"></span>
+    <span class="star"></span><span class="star"></span>
+    <span class="star"></span><span class="star"></span>
+  </div>
+
+  <script>
+    // $(".js-starpoint2 .star").on("click", function(){
+    //   $(".js-starpoint2 .star").removeClass("on");
+    //   $(this).addClass("on").prevAll().addClass("on");
+    // })
+  </script>
+</samp>
+          </div>
+          
+          <h3 class="guide_h3">- tooltip(.icon_tooltip.js-tooltip)
+            <a class="api_link" href="https://jqueryui.com/tooltip/" target="_blank">Plugin API</a>
+          </h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <i class="icon icon-tooltip js-tooltip" title="짧은 툴팁"></i>
+
+  <div class="tar">
+      <i class="icon icon-tooltip js-tooltip_sendstate" data-geo=".js_tooltip_sendstate" ></i>
+      <div class="js_tooltip_sendstate" style="display: none">
+          장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 
+      </div>       
+  </div>
+</samp>
+          </div>
+        </div>
+
+        <div class="article" id="button">
+          <h2 class="guide_h2"> button 샘플</h2>
+          <h3 class="guide_h3">- BUTTON size</h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <a class="btn btn_xsm btn_default" href="#" role="button">
+    <span>a 버튼 - extra small h26 </span>
+  </a>
+  <button class="btn btn_xsm btn_default" type="button"><span>Button 버튼</span></button>
+  <input  class="btn btn_xsm btn_default" type="button" value="Input 버튼"/>
+  <input  class="btn btn_xsm btn_default" type="submit" value="Submit 버튼"/>
+  <br/>
+
+  <a class="btn btn_sm btn_default" href="#" role="button">
+    <span>a 버튼 - small h42</span>
+  </a>
+  <button class="btn btn_sm btn_default" type="button"><span>Button 버튼</span></button>
+  <input  class="btn btn_sm btn_default" type="button" value="Input 버튼"/>
+  <input  class="btn btn_sm btn_default" type="submit" value="Submit 버튼"/>
+  <br/>
+
+  <a class="btn btn_md btn_default " href="#" role="button">
+    <span>a 버튼 - Medium h50 (default)</span>
+  </a>
+  <button class="btn btn_md btn_default" type="button"><span>Button 버튼</span></button>
+  <input  class="btn btn_md btn_default" type="button" value="Input 버튼"/>
+  <input  class="btn btn_md btn_default" type="submit" value="Submit 버튼"/>
+ <br/>
+  <a class="btn btn_lg btn_default" href="#" role="button">
+    <span>a 버튼 - large h60</span>
+  </a>
+  <button class="btn btn_lg btn_default" type="button"><span>Button 버튼</span></button>
+  <input  class="btn btn_lg btn_default" type="button" value="Input 버튼"/>
+  <input  class="btn btn_lg btn_default" type="submit" value="Submit 버튼"/>
+</samp>
+          </div>
+
+          <h3 class="guide_h3">- BUTTON type</h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <a class="btn btn_xsm btn_default " href="#" role="button">
+    <span>a 버튼 - .btn_default</span>
+  </a>
+  <button class="btn btn_sm btn_default" type="button"><span>Button 버튼</span></button>
+  <input  class="btn btn_md btn_default" type="button" value="Input 버튼"/>
+  <input  class="btn btn_lg btn_default" type="submit" value="Submit 버튼"/>
+  <br/>
+
+  <a class="btn btn_xsm btn_default disabled" href="#" role="button">
+    <span>a 버튼 - btn_default disabled</span>
+  </a>
+  <button class="btn btn_sm btn_default" type="button" disabled><span>Button 버튼</span></button>
+  <input  class="btn btn_md btn_default" type="button" value="Input 버튼"  disabled>
+  <input  class="btn btn_lg btn_default" type="submit" value="Submit 버튼" disabled>
+  <br/>
+  
+  <a class="btn btn_xsm btn_line" href="#" role="button">
+    <span>a 버튼 - .btn_line</span>
+  </a>
+  <button class="btn btn_sm btn_line" type="button"><span>Button 버튼</span></button>
+  <input  class="btn btn_md btn_line" type="button" value="Input 버튼"/>
+  <input  class="btn btn_lg btn_line" type="submit" value="Submit 버튼"/>
+  <br/>
+
+  <a class="btn btn_xsm btn_line disabled" href="#" role="button">
+    <span>a 버튼 - btn_line disabled</span>
+  </a>
+  <button class="btn btn_sm btn_line" type="button" disabled><span>Button 버튼</span></button>
+  <input  class="btn btn_md btn_line" type="button" value="Input 버튼" disabled>
+  <input  class="btn btn_lg btn_line" type="submit" value="Submit 버튼" disabled>
+  <br>
+
+  <a class="btn btn_xsm btn_gray_line" href="#" role="button">
+    <span>a 버튼 - .btn_gray_line</span>
+  </a>
+  <button class="btn btn_sm btn_gray_line" type="button"><span>Button -  btn_line Gray</span></button>
+  <input  class="btn btn_md btn_gray_line " type="button" value="Input 버튼"/>
+  <input  class="btn btn_lg btn_gray_line" type="submit" value="Submit 버튼" >
+  <br/>
+  
+  <a class="btn btn_xsm btn_gray_line disabled" href="#" role="button">
+    <span>a 버튼 - .btn_gray_line disabled</span>
+  </a>
+  <button class="btn btn_sm btn_gray_line" type="button" disabled><span>Button -  btn_line Gray</span></button>
+  <input  class="btn btn_md btn_gray_line" type="button" value="Input 버튼" disabled>
+  <input  class="btn btn_lg btn_gray_line" type="submit" value="Submit 버튼" disabled>
+  <br/>
+  
+  <a class="btn btn_xsm btn_black_line " href="#" role="button">
+    <span>a 버튼 - .btn_black_line</span>
+  </a>
+  <button class="btn btn_sm btn_black_line" type="button"><span>Button 버튼</span></button>
+  <input  class="btn btn_md btn_black_line" type="button" value="Input 버튼"/>
+  <input  class="btn btn_lg btn_black_line" type="submit" value="Submit 버튼"/>
+  <br/>
+
+  <a class="btn btn_xsm btn_black_line disabled" href="#" role="button">
+    <span>a 버튼 - .btn_black_line disabled</span>
+  </a>
+  <button class="btn btn_sm btn_black_line" type="button" disabled><span>Button 버튼</span></button>
+  <input  class="btn btn_md btn_black_line" type="button" value="Input 버튼" disabled>
+  <input  class="btn btn_lg btn_black_line" type="submit" value="Submit 버튼" disabled>
+    
+</samp>
+          </div>
+
+          <h3 class="guide_h3">- BUTTON 컬러 예외</h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <a class="btn btn_xsm btn_line_xsm" href="#" role="button">
+    <span>a 버튼 - extra small h26 </span>
+  </a>
+</samp>
+          </div>
+
+          <h3 class="guide_h3">- BUTTON text</h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <a class="btn_text" href="#" role="button">
+    <span>text botton</span>
+  </a>
+  <br/>
+  <a class="btn_text disabled" href="#" role="button">
+    <span>text botton</span>
+  </a>
+
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-delete"></i>
+    <span>선택삭제</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-edit"></i>
+    <span>수정하기</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-refresh"></i>
+    <span>재업로드</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-end"></i>
+    <span>종료</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-file_b"></i>
+    <span>파일첨부</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-file_g"></i>
+    <span>파일첨부</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-check"></i>
+    <span>미리보기</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-pdf"></i>
+    <span>PDF 저장</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-print"></i>
+    <span>인쇄하기</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-headset"></i>
+    <span>자주 묻는 질문</span>
+  </a>
+  <a class="btn_icon_text" href="#" role="button">
+    <i class="icon icon-ahead"></i>
+    <span>보장내용확인</span>
+  </a>
+</samp>
+          </div>
+
+
+          <h3 class="guide_h3">버튼 정렬 (.btn_set+().tac,tar,tal), .btn_set-single, .btn_set-double)</h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="btn_set tac">
+    <a class="btn btn_default" href="#" role="button"><span>Link 버튼</span></a>
+    <a class="btn btn_default" href="#" role="button"><span>Link 버튼</span></a>
+    <a class="btn btn_default" href="#" role="button"><span>Link 버튼</span></a>
+  </div>
+  
+  <div class="btn_set-single">
+    <div class="btn_item"> <a class="btn btn_default" href="#" role="button"><span>Link 버튼</span></a> </div>
+  </div>
+
+  <div class="btn_set-double">
+    <div class="btn_item"><a class="btn btn_default" href="#" role="button"><span>Link 버튼</span></a></div>
+    <div class="btn_item"><a class="btn btn_line" href="#" role="button"><span>Link 버튼</span></a></div>
+  </div>
+</samp>
+          </div>
+        </div>
+
+        <div class="article" id="paging">
+          <h2 class="guide_h2">페이징</h2>
+          <h3 class="guide_h3">Basic</h2>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="paging-area">
+    <div class="paging">
+      <a href="#" class="prev_end" title ="previous"><i class="icon  page_prevEnd"></i></a>
+      <a href="#" class="prev" title ="previous"><i class="icon page_prev"></i></a>
+      <strong class="on"><em>1</em></strong>
+      <a href="#"><em>2</em></a>
+      <a href="#"><em>3</em></a>
+      <a href="#"><em>4</em></a>
+      <a href="#"><em>5</em></a>
+      <a href="#" class="next" title ="next"><i class="icon page_next on"></i></a>
+      <a href="#" class="next_end" title ="next"><i class="icon page_nextEnd"></i></a>
+    </div>
+  </div>
+</samp>
+          </div>
+        </div>
+                    
+        <div class="article" id="tabmenu">
+          <h2 class="guide_h2">tabmenu</h2>
+          <h3 class="guide_h3">- tabmenu (default) </h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div id="tab-1" class="tab-container">
+    <div class="tab-wrap">
+      <ul class="tab-list tab-round">
+        <li><a href="#" class="active" id="tabcont-1">탭메뉴</a></li>
+        <li><a href="#" id="tabcont-2">탭메뉴</a></li>
+        <li><a href="#" id="tabcont-3">탭메뉴</a></li>
+      </ul>
+      <div class="tab-panel">
+        <div id="content-1">탭 내용1</div>
+        <div id="content-2">탭 내용2</div>
+        <div id="content-3">탭 내용3</div> 
+      </div>
+    </div>
+  </div>
+  
+  <div id="tab-2" class="tab-container">
+    <div class="tab-wrap">
+      <ul class="tab-list tab-text">
+        <li><a href="#"  id="tabcont-4">탭메뉴</a></li>
+        <li><a href="#" class="active" id="tabcont-5">탭메뉴</a></li>
+        <li><a href="#" id="tabcont-6">탭메뉴</a></li>
+      </ul>
+      <div class="tab-panel">
+        <div id="content-4">탭 내용4</div>
+        <div id="content-5">탭 내용5</div>
+        <div id="content-6">탭 내용6</div> 
+      </div>
+    </div>
+  </div>
+
+</samp>
+          </div>
+        </div>
+
+				
+        <div class="article" id="accordion">
+          <h2 class="guide_h2">accordion menu</h2>
+          <h3 class="guide_h3">- accordion-list </h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="accordion-wrap">
+    <ul class="accordion-list js-accordion_menu" id="accordion">
+      <li class="trp_acitem">
+        <div class="header-area">
+          <a href="#" class="acc_btn" >
+            <span class="accordion_name">accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1</span>
+            <i class="icon icon-accordion_arrow_down"></i>
+          </a>
+        </div>
+        <div class="con-area" >
+          accordion1-con
+        </div>
+      </li>
+      <li class="trp_acitem">
+        <div class="header-area">
+          <a href="#" class="acc_btn" >
+            <span class="accordion_name">accordion2</span>
+            <i class="icon icon-accordion_arrow_down"></i>
+          </a>
+        </div>
+        <div class="con-area" >
+          accordion2-con
+        </div>
+      </li>
+      <li class="trp_acitem">
+        <div class="header-area">
+          <a href="#" class="acc_btn" >
+            <span class="accordion_name">accordion3</span>
+            <i class="icon icon-accordion_arrow_down"></i>
+          </a>
+        </div>
+        <div class="con-area" >
+          accordion3-con
+        </div>
+      </li>
+    </ul>
+  </div>
+</samp>
+          </div>
+        </div>
+
+
+        <div class="article" id="table">
+          <h2 class="guide_h2">table</h2>
+          <h3 class="guide_h3">- table</h3>
+          <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <table>
+    <thead>
+      <tr>
+        <th>제목</th>
+        <th>제목</th>
+        <th>제목</th>
+        <th>제목</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>tbody 제목</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <th>tbody 제목</th>
+        <td>11</td>
+        <td>22</td>
+        <td>33</td>
+      </tr>
+      <tr>
+        <th>tbody 제목</th>
+        <td>111</td>
+        <td>222</td>
+        <td>333</td>
+      </tr>
+    </tbody>
+  </table>
+</samp>
+          </div>
+        </div>
+
+
+
+                
+        <div class="article" id="layer_popup">
+          <h2 class="guide_h2">레이어 팝업</h2>
+          <h3 class="guide_h3">- 기본 레이어 팝업</h3>
+          <div class="item-inner">
+<samp class="sample js-source" data-sample="code">
+  <!-- <a href="#popup_default_alert-wrap1" class="btn btn_default js-modal_open" data-modal="modal_layer1"><span>레이어팝업</span></a> -->
+
+  <button class="btn btn_default js-modal_open" data-modal="modal_layer1"><span>레이어팝업1</span></button>
+  <button class="btn btn_default js-modal_open" data-modal="modal_layer2"><span>레이어팝업2</span></button>
+
+  <div id="modal_layer1" class="popup-wrap" >
+    <div class="popup-dim"></div>
+    <div class="popup-align mode-full">
+      <div class="popup-vertical">
+        <div class="popup-layer">
+
+          <div class="pop-panel">
+            <div class="pop-header">
+              <button class="icon btn_close js-modal_close">layer close</button>
+              <div class="pop_tit">Pop Title</div>
+            </div>
+            <div class="pop-body">
+              <section class="section" style="display: block;">
+                <div class="alert">
+                  <strong>강조</strong>님! <br>
+                  코멘트
+                </div>
+                <div class="ment">
+                  start
+                  코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>
+                  코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>
+                  코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>
+                  코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>
+                  코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>
+                  코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>end
+                </div>
+              </section>
+            </div>
+            <div class="pop-footer">
+              <div class="btn_set btn_set-double">
+                <div class="btn_item">
+                  <a class="btn btn_md btn_line" href="#" role="button"><span>취소</span></a>
+                </div>
+                <div class="btn_item">
+                  <a class="btn btn_md btn_default " href="#" role="button"><span>확인</span></a>
+                </div>
+              </div>
+            </div>
+          </div> 
+    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal_layer2" class="popup-wrap" >
+    <div class="popup-dim"></div>
+    <div class="popup-align mode-full">
+      <div class="popup-vertical">
+        <div class="popup-layer">
+
+          <div class="pop-panel">
+            <div class="pop-header">
+              <button class="icon btn_close js-modal_close">layer close</button>
+              <div class="pop_tit">Pop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop TitlePop Title</div>
+            </div>
+            <div class="pop-body">
+              <section class="section" style="display: block;">
+                <div class="alert">
+                  <strong>강조</strong>님! <br>
+                  코멘트
+                </div>
+                <div class="ment">
+                  start
+                  코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>
+                  코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>코멘트 <br>end
+                </div>
+              </section>
+            </div>
+          </div> 
+    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // (function(){    
+    //   $(popup_default_alert.getBtn).on("click", function($e){
+    //     $(".trp.popupfixed-wrap").appendTo("body");
+    //     $e.preventDefault();
+    //     //popup_default_alert.open(this);     // or false   
+    //     //popup_default_alert2.open(this);    // or false   
+    //     //popup_default_alert3.open(this);    // or false   
+    //     popup_default_alert4.open(this);    // or false   
+    //   });
+  
+    //   $("body").on("click", "#popup_default_alert-wrap1 .js-closepop, #popup_default_alert-wrap .popup-dim", function($e){
+    //       $e.preventDefault(); 
+    //       popup_default_alert.close();
+    //   });
+    //   $("body").on("click", "#popup_default_alert-wrap2 .js-closepop, #popup_default_alert-wrap2 .popup-dim", function($e){
+    //       $e.preventDefault(); 
+    //       popup_default_alert2.close(
+    //           function(){ alert(" #popup_default_alert-wrap2 닫기") }
+    //       );
+    //   });
+    //   $("body").on("click", "#popup_default_alert-wrap3 .js-closepop, #popup_default_alert-wrap3 .popup-dim", function($e){
+    //       $e.preventDefault(); 
+    //       popup_default_alert3.close();
+    //   });
+    //   $("body").on("click", "#popup_default_alert-wrap4 .js-closepop, #popup_default_alert-wrap4 .popup-dim", function($e){
+    //       $e.preventDefault(); 
+    //       popup_default_alert4.close();
+    //   });
+    
+    // })();
+  </script>
+</samp>
+          </div>
+        </div> 
+                   
+        <div class="article" id="scroll_top">
+          <h2 class="guide_h2">scroll_top</h2>
+        </div>
+              
+      </div>
+    </div>
+    <!-- //container -->
+  </div>
+</div>
+
+<script>
+  $(".guide_h2").on("click", function (e) {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 100);
+
+    TRP.debug("scroll TOP");
+    return false;
+  })
+</script>
+</body>
+</html>

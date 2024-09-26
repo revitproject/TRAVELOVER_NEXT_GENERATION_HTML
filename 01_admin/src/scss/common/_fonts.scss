@@ -1,0 +1,36 @@
+/* 수트, sc "SUIT" */
+// @font-face{
+// 	font-family:"SUIT-Regular";
+// 	src:url('/fonts/SegoePrint.eot');
+// 	src:url('/fonts/SegoePrint.eot?#iefix') format('embedded-opentype'),
+// 	url('/fonts/SegoePrint.woff') format('woff'),
+// 	url('/fonts/SegoePrint.ttf') format('truetype'),
+// 	url('/fonts/SegoePrint.svg#NanumGothic') format('svg');
+// 	src:local(※), url('/fonts/SegoePrint.woff') format('woff');
+// }
+
+@font-face{
+	font-family:"SUIT-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/SUIT-Regular.woff2') format('woff2');
+}
+@font-face{
+	font-family:"SUIT-Medium";
+  font-weight: 500;
+  font-style: normal;
+  src: url('./fonts/SUIT-Medium.woff2') format('woff2');
+}
+@font-face{
+	font-family:"SUIT-Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url('./fonts/SUIT-Bold.woff2') format('woff2');
+}
+@font-face{
+	font-family:"SUIT-ExtraBold";
+  font-weight: 800;
+  font-style: normal;
+  src: local("SUIT-ExtraBold"), url('./fonts/SUIT-ExtraBold.woff2') format('woff2');
+}
+ 

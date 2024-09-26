@@ -1,0 +1,107 @@
+//// 계약조회
+.contract-section {
+  .radio-group { gap: 10px;
+    .radio-btn {
+      .icon-individual-1 { &:after { @include sp_icon($icon-individual-1);}} 
+      .icon-individual-2 { &:after { @include sp_icon($icon-individual-2);}} 
+      .icon-individual-3 { &:after { @include sp_icon($icon-individual-3);}} 
+    }
+    input[type="radio"] { 
+      &:checked + .radio-btn { 
+        .icon-individual-1 { &:after { @include sp_icon($icon-individual-1_on);}} 
+        .icon-individual-2 { &:after { @include sp_icon($icon-individual-2_on);}} 
+        .icon-individual-3 { &:after { @include sp_icon($icon-individual-3_on);}} 
+      }
+    }
+  }
+}
+
+//// 이용안내
+// 자주하는질문(FAQ)
+.faq-section {
+  .search-box { padding: 20px; background: $colorG0; border-radius: 20px;
+    .search-inner { display: flex; flex-direction: column; align-items: center; gap: 14px;
+      .select-box, .input_search { width: 100%; }
+      .btn { min-width: 100%; }
+    }
+    + .tab-container { margin-top: 50px; 
+      .tab-list { padding-bottom: 8px; }
+      .tab-cont { padding: 22px 0 0; }
+    }
+  }
+  // 아코디언 FAQ 타입
+  .has-faq {
+    .accordion-list {
+      .header-area {
+        &.active .acc_btn i { transform: translateY(-50%) rotate(180deg); }
+        .acc_btn { padding: 20px 40px 20px 46px;
+          i { top: 50%; right: 8px; transform: translateY(-50%); }
+          &::before {
+            content: 'Q';
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            width: 20px;
+            margin-right: 20px;
+            color: $colorMain;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 24px;
+          } 
+          .acco-type { display: block; margin-bottom: 8px; color: $colorG9; font-size: 14px; font-weight: 500; line-height: 19px; word-break: break-all; } 
+          .accordion_name { font-size: 15px; font-weight: 600; line-height: 20px; }
+        }
+      }
+      .con-area { padding: 22px 8px; background: $colorG0;
+        .con-desc {
+          position: relative;
+          padding-left: 40px;
+          font-size: 14px;
+          line-height: 19px;
+          word-break: break-all;
+          &::before {
+            content: 'A';
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            width: 20px;
+            margin-right: 20px;
+            color: $colorB;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 24px;
+          } 
+          p { margin-bottom: 8px; font-size: 14px; line-height: 19px; word-break: break-all;
+            &:last-child { margin-bottom: 0; }
+          }
+        }
+      }
+    }
+    +.btn_set-single { margin-top: 30px; }
+  }
+}
+
+// 1:1문의
+.inquiry-section {
+  .list-wrap {
+    border-top: 1px solid $colorG1;
+    border-bottom: 1px solid $colorG1;
+  }
+    // 답변 영역
+    .anwser-list { margin-top: 20px; padding: 0 20px;
+      .form-list { max-width: 100%; }
+      .input-group {
+        position: relative;
+        padding-left: 38px;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          display: block;
+          @include sp_icon($icon-reply);
+        }
+      }
+    }
+}

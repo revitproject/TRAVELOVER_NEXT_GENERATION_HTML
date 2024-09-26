@@ -1,0 +1,57 @@
+/* ================== header */
+header { background: $colorMain;
+  #header { background: $colorMain;  width: 100%; transition: all 0.25s ease-in-out; 
+    position: fixed; left:0; top:0; right:0; z-index: 50;
+    .mb_ui { display: block;} 
+
+    //logo 
+    .logo-area { display: flex; justify-content: space-between; align-items: center; margin: 10px 0; 
+      .top_slogan { display: none; }
+    }
+
+    //gnb
+    .gnb-wrap { border:1px solid red;  position: fixed; left:0; top:0; right:0; bottom:0; background: #ddd; z-index:1; padding: 24px; display: none; z-index: 51;
+      //모바일 메뉴닫기
+      .btn_close {  position: absolute; right: 24px; top: 24px; font-size: 0; line-height: normal; border: 1px solid red;}
+
+      //상단유틸
+      .util-area { 
+        .util_info-list { 
+          li { 
+            a, span { display: block; font-size: 14px; font-weight: 800; line-height: 14px;}
+          }
+        }
+      }
+
+      //gnb
+      .nav-area { 
+        .nav-panel { 
+          > ul { 
+            > li { 
+              a { display: block; font-size: 18px; font-weight: 800; line-height: 22px; }
+    
+              //depth2
+              .depth2 { 
+                >ul { 
+                  li {
+                    a, span { }
+                  }
+                }
+              }
+            }
+          }
+    
+        }
+      }
+    
+    }
+
+
+    //스크롤상단고정
+    &.fixed { 
+      position: fixed; left:0; top:0; right:0; z-index: 50;  height: auto;
+     
+    }
+
+  }
+} 

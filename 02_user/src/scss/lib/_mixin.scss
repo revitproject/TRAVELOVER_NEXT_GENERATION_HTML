@@ -1,0 +1,180 @@
+@charset "utf-8";
+/*  
+  _mixin.scss  
+  # 선언  (@content); 확장
+  @mixin opacity($value) {
+    opacity: $value;
+    @content;
+  }
+  # 사용
+  xxx {
+    @include opacity(.5){
+      확장 스타일
+    }
+  }
+*/
+
+@mixin box-sizing($type:border-box) {
+  -webkit-box-sizing:$type;
+  -moz-box-sizing:$type;
+  -o-box-sizing:$type;
+  -ms-box-sizing:$type;
+  box-sizing: $type;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+  -ms-border-radius:$radius;
+  border-radius:$radius;
+}
+
+/* opacity(1.0) == 100% */
+@mixin opacity($value) {
+    -webkit-opacity: $value;
+    -moz-opacity: $value;
+    filter:alpha(opacity=$value*100);
+    opacity: $value; 
+}
+
+@mixin placeholder($color) {
+  &.placeholdersjs             { color: $color; } 
+  &.placeholder                { color: $color; } 
+  &::-webkit-input-placeholder { color: $color; } 
+  &::-moz-placeholder          { color: $color; }
+  &:-ms-input-placeholder      { color: $color; }
+  &::placeholder               { color: $color; }
+}
+
+/* 1줄 말줄임 */
+@mixin ellipsis {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis
+}
+/* 멀티라인 말줄임 */
+@mixin ellipsis-line($line) {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display: -webkit-box;  -webkit-line-clamp: $line; -webkit-box-orient: vertical;
+}
+/* 텍스트 깨기 */
+@mixin wordBreak-all(){
+  white-space: normal;
+  word-wrap: normal;
+  word-break: break-all;
+}
+/* 텍스트 단어별 줄바꿈  */
+@mixin wordBreak-word(){
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+}
+
+// generic transform  @include transform(rotate(180deg));
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// rotate(xxdeg)
+@mixin rotate($deg) {
+  @include transform(rotate($deg));
+}
+
+// shadow
+@mixin shadow($x_px, $y_px, $blur_px, $alpha){
+  box-shadow: $x_px $y_px $blur_px 0 rgba(0,0,0, $alpha), $x_px $y_px $blur_px 0 rgba(0,0,0, $alpha);
+}
+
+
+// transition: width .35s ease-in-out;
+// linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+//user-select (none)
+@mixin user-select($select) {
+  -moz-user-select: -moz-#{$select};
+  -khtml-user-select: $select;
+  -webkit-user-select: $select;
+  -o-user-select: $select;
+  user-select: $select;
+}
+
+//font-smoothing
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/* 단위환산 / vw(10vw) */
+@function vw($value){ //   1920px : ex = vw(44vw)
+  @return ($value) / ($G-maxWidth * 0.01) + 0vw;
+}
+@function vwm($value){ //  768px  : ex = vw(44vw)
+  @return ($value) / ($G-wMobile * 0.01) + 0vw;
+}
+@function px($value){ //   1440px : ex = vw(44vw)
+  @return ($value) + 0px;
+}
+
+
+
+// @function calculateTypeOffset($lh, $fontSize, $descenderHeightScale) {
+//   $lineHeightScale: $lh / $fontSize;
+//   @return ($lineHeightScale - 1) / 2 + $descenderHeightScale;
+// }
+
+// @mixin basekick($typeSizeModifier, $baseFontSize, $descenderHeightScale, $typeRowSpan, $gridRowHeight, $capHeight) {
+//   $fontSize: $typeSizeModifier * $baseFontSize;
+//   $lineHeight: $typeRowSpan * $gridRowHeight;
+//   $typeOffset: calculateTypeOffset($lineHeight, $fontSize, $descenderHeightScale);
+//   $topSpace: $lineHeight - $capHeight * $fontSize;
+//   $heightCorrection: 0;
+  
+//   @if $topSpace > $gridRowHeight {
+//     $heightCorrection: $topSpace - ($topSpace % $gridRowHeight);
+//   }
+  
+//   $preventCollapse: 1;
+  
+//   font-size: #{$fontSize}px;
+//   line-height: #{$lineHeight}px;
+//   transform: translateY(#{$typeOffset}em);
+//   padding-top: $preventCollapse;
+
+//   &::before {
+//     content: "";
+//     margin-top: #{-($heightCorrection + $preventCollapse)}px;
+//     display: block;
+//     height: 0;
+//   }
+// }

@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* common.scss */
+@import "common/variables";
+@import "common/fonts";
+
+// library
+@import "lib/mixin";
+
+// library sprite
+@import "lib/spritesmith/sprite_mixins";
+@import "lib/spritesmith/sp_form";
+@import "lib/spritesmith/sp_icon";
+// @import "lib/iconfont/sp_iconfont";
+
+// import base
+@import "common/pc/base";
+@import "common/pc/header";
+@import "common/pc/footer";
+@import "common/pc/layout";
+@import "common/pc/popup";
+
+@import "common/button";
+@import "common/form";
+@import "common/icon";
+@import "common/ui_common";
+
+
+// page import 
+@import "import/main";
+@import "import/b2c/ui_content_pc"; 
